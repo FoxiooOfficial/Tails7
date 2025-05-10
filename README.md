@@ -35,4 +35,4 @@
 **The whole thing is based on MIT License**
 
 - ✅ You can modify the code and distribute it as you like.
-- ⚠️ However, you must specify me in the credits.
+- ⚠️ However, you must specify me (**Foxioo**) in the credits.
