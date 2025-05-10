@@ -24,6 +24,12 @@
 
 ℹ️ This is my first so advanced project, for any inadequacies and errors please report it and I will try to fix it.
 
+💝 I would like to sincerely thank them because the project would not work out:
+- Sketchy / MuddyMole
+- Linky
+- Glace Sue
+- Clickteam
+
 ## 💿 Installation
 
 ## 📝 How to Build
