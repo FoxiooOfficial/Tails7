@@ -5,7 +5,7 @@
 
   <h2>Mode7 engine for Clickteam Fusion</h2>
 
-  | <a href="https://github.com/FoxiooOfficial/FoxiooShaderPack/issues" class="_LinkButton">`⚠️ Report Bug`</a> | **`Release: R1.0.1_10.05.25`** | **`Edit description from: 10.05.25`** | **`License: MIT`** |
+  | <a href="https://github.com/FoxiooOfficial/FoxiooShaderPack/issues" class="_LinkButton">`⚠️ Report Bug`</a> | **`Release: R1.0.1_10.05.25a`** | **`Edit description from: 10.05.25`** | **`License: MIT`** |
 </div>
 
 ## 📚 Table of contents
@@ -22,6 +22,8 @@
 - The engine is designed to handle multiple modes as it needs to map the object, scale, display on the screen and more.
 - Very easy to use and has many tutorials and <a href="https://foxioo.itch.io/tails7examples">**✨special examples✨**</a>.
 
+ℹ️ This is my first so advanced project, for any inadequacies and errors please report it and I will try to fix it.
+
 ## 💿 Installation
 
 ## 📝 How to Build
@@ -29,3 +31,8 @@
 ## ❗ Reports And Ideas
 
 ## 📑 License
+
+**The whole thing is based on MIT License**
+
+- ✅ You can modify the code and distribute it as you like.
+- ⚠️ However, you must specify me (**Foxioo**) in the credits.
