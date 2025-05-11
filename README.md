@@ -29,6 +29,16 @@
 - Glace Sue
 - Clickteam
 
+## 📝 Requirements
+
+<p><b>This project requires the following:</b></p>
+    <ul>
+                <li><b>Clickteam Fusion 2.5</b> <i>(Build 295.10 or later)</i><b>:</b> <a href="https://www.clickteam.com/clickteam-fusion-2-5">Link</a> or <a href="https://store.steampowered.com/app/248170/Clickteam_Fusion_25/">Link for Steam version</a></li>
+                <li><b>Clickteam Fusion 2.5+ DLC:</b> <a href="https://www.clickteam.com/clickteam-fusion-2-5-plus">Link</a> or <a href="https://store.steampowered.com/app/1056780/Clickteam_Fusion_25_Addon/">Link for Steam version</a></li>
+                <li><b>Hardware that meets the minimum requirements with Clickteam Fusion.</b></li>
+                <li><b>Device that supports Direct3D9 or Direct3D11 shaders.</b></li>
+  </ul>
+
 ## 💿 Installation
 
 1. Press **Code** -> **Download ZIP**.
