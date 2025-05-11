@@ -43,7 +43,7 @@
 
 <img src="Documentation/Media/Install/3.png" alt="Installation: 3" width="100%">
 
-4. From the Tails7 folder, go to **Shader** and flip the **Foxioo Shader Pack** folder.
+4. From the Tails7 folder, go to **Shader** and copy the **Foxioo Shader Pack** folder to Clickteam Fusion Effect folder.
 
 <img src="Documentation/Media/Install/4.png" alt="Installation: 4" width="100%">
 
