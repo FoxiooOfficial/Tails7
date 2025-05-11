@@ -61,14 +61,14 @@
 
 🔴 **Issue topic:**
 
-Please report <a href="https://github.com/FoxiooOfficial/FoxiooShaderPack/issues">here</a>, they will be checked on an ongoing basis and attempts will be made to fix them.
+Please report <a href="https://github.com/FoxiooOfficial/Tails7/issues">here</a>, they will be checked on an ongoing basis and attempts will be made to fix them.
 
 *(These bugs will be recorded in the notebook **Bug Tracker.xlsx**)*
 
 
 🟢 **Ideas topic:**
 
- Also report <a href="https://github.com/FoxiooOfficial/FoxiooShaderPack/issues">here</a>, however, with the topic remember to add the appropriate tag!
+ Also report <a href="https://github.com/FoxiooOfficial/Tails7/issues">here</a>, however, with the topic remember to add the appropriate tag!
 
 ## 📑 License
 
