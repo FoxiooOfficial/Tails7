@@ -68,7 +68,7 @@ Please report <a href="https://github.com/FoxiooOfficial/Tails7/issues">here</a>
 
 🟢 **Ideas topic:**
 
- Also report <a href="https://github.com/FoxiooOfficial/Tails7/issues">here</a>, however, with the topic remember to add the appropriate tag!
+ Also report <a href="https://github.com/FoxiooOfficial/Tails7/issues?q=is%3Aissue%20state%3Aopen%20label%3Aidea">here</a>, however, with the topic remember to add the appropriate tag!
 
 ## 📑 License
 
