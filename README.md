@@ -39,7 +39,7 @@
 
 <img src="Documentation/Media/Install/2.png" alt="Installation: 2" width="100%">
 
-3. In Clickteam Fusion, go to **Tools** -> **Windwos Explorer**.
+3. In Clickteam Fusion, go to **Tools** -> **Windows Explorer**.
 
 <img src="Documentation/Media/Install/3.png" alt="Installation: 3" width="100%">
 
