@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tails7 Background Gradient</title>
+        <link rel="icon" href="Media/Main/Icon16.png" type="image/x-icon" />
+        <link rel="stylesheet" href="CSS/Style.css" />
+
+        <script src="Scripts/Navigation.js"></script>
+    </head>
+
+    <body>
+        <div class="_Container">
+
+        <!-- Panel boczny ####################################################### -->
+        <aside class="_Sidebar">
+
+            <!-- Logo :3 -->
+            <div class="_Logo">
+
+                <a href="Index.html">
+                    <img src="Media/Main/Logo.png" alt="Logo" />
+                </a>
+
+            </div>
+
+            <!-- Pasek boczny z opcjami (lista!!!) -->
+            <nav class="_Navigation">
+                <ul>
+                    <!-- Strona główna -->
+                    <li><a href="Index.html">Homepage</a></li>
+                    <hr/>
+            
+                    <!-- Instrukcje -->
+                    <li>
+                        <a href="Instructions.html">Instructions</a>
+                        <ul>
+                            <li><a href="Instructions_1.html">What is Tails7?</a></li>
+                            <li><a href="Instructions_2.html">Engine Limits and Known Issues</a></li>
+                        </ul>
+                    </li>
+                    <hr/>
+            
+                    <!-- Rozpoczęcie pracy -->
+                    <li>
+                        <a href="GettingStarted.html">Getting Started</a>
+                    </li>
+                    <hr/>
+            
+                    <!-- Konfiguracja obiektów -->
+                    <li>
+                        <a href="ConfigurationObjects.html">Configuration of Objects</a>
+                        <ul>
+                            <li><a href="ConfigurationObjects_1.html">Player Hitbox</a></li>
+                            <li><a href="ConfigurationObjects_2.html">Tails7 Info Object</a></li>
+                            <li><a href="ConfigurationObjects_3.html">Tails7 Render Ground</a></li>
+                            <li><a href="ConfigurationObjects_4.html">Tails7 Mapper Object</a></li>
+                            <li><a href="ConfigurationObjects_5.html">Tails7 Camera Object</a></li>
+                            <li><a href="ConfigurationObjects_6.html">Tails7 Center Pointer</a></li>
+                            <li><a href="ConfigurationObjects_7.html">Tails7 Background Gradient</a></li>
+                            <li><a href="ConfigurationObjects_8.html">Sprite Objects</a></li>
+                            <li><a href="ConfigurationObjects_9.html">Fade Objects</a></li>
+                            <li><a href="ConfigurationObjects_10.html">Line Objects</a></li>
+                        </ul>
+                    </li>
+                    <!--<hr/>-->
+            
+                    <!-- Kalkulacja mapowania -->
+                    <li>
+                        <!--<a href="MappingCalculation.html">Mapping Calculation</a>-->
+                    </li>
+                    <hr/>
+            
+                    <!-- Poradniki -->
+                    <li>
+                        <a href="Tutorials.html">Tutorials</a>
+                        <ul>
+                            <li><a href="Tutorials_1.html">Object Mapping Basics</a></li>
+                            <li><a href="Tutorials_2.html">Creating Fade Effects</a></li>
+                            <li><a href="Tutorials_3.html">Working with Lines</a></li>
+                            <li><a href="Tutorials_4.html">Changing Game Resolution</a></li>
+                            <li><a href="Tutorials_5.html">Background Objects Setup</a></li>
+                            <!--<li><a href="Tutorials_6.html">Camera Configuration</a></li>-->
+                            <!--<li><a href="Tutorials_7.html">3D Sound Implementation</a></li>-->
+                            <!--<li><a href="Tutorials_8.html">Particle Systems</a></li>-->
+                            <!--<li><a href="Tutorials_9.html">Interactive Objects (Pick-ups)</a></li>-->
+                            <!--<li><a href="Tutorials_10.html">Making Gun and Weapon</a></li>-->
+                            <!--<li><a href="Tutorials_11.html">Creating a HUD</a></li>-->
+                            <!--<li><a href="Tutorials_12.html">Elevation System (Z-axis)</a></li> These tutorials will be introduced soon--> 
+                            <li><a href="Tutorials_13.html">Ground Texture Swapping</a></li>
+                        </ul>
+                    </li>
+                    <hr/>
+            
+                    <!-- Przykłady -->
+                    <li>
+                        <a href="Examples.html">Examples</a>
+                    </li>
+                    <hr/>
+            
+                    <!-- Dodatkowe sekcje -->
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="About.html">About</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Pasek do zmiany szerokości (≧∇≦)ﾉ -->
+        <div class="_Resizer"></div>            <script src="Scripts/Resizer.js"></script>
+
+        <!-- Górny pasek (kolorki) #######################################################-->
+        <header class="_Header">
+
+            <div class="_Header_Text">
+                Copyright © 2025 Foxioo<br>
+                Official documentation of the Tails7 for version R1.0.1<br/>
+            </div>
+
+        </header>
+
+        <!-- Główna zawartość strony #####################################################-->
+        <main class="_Content">
+
+            <h1><img src="Media/Main/Tails7ExternalBackgroundGradient.png" alt="Tails7 External Background Gradient Icon"><img src="Media/Main/Tails7InternalBackgroundGradient.png" alt="Tails7 Internal Background Gradient Icon"> Tails7 Background Gradient</h1>
+        
+            <hr><br>
+        
+            <h2>1. General Description of Objects</h2>
+        
+            <p style="padding-top: 10px;">
+                The <b>Tails7 External Background Gradient</b> and <b>Tails7 Internal Background Gradient</b> objects are responsible for applying a gradient to the screen. They are used to create <b>"atmosphere"</b> and <b>"fog"</b> in the sky.
+            </p>
+        
+            <h3>Differences between objects:</h3>
+        
+            <ul class="_GradientList">
+                <li class="_GradientItem">
+                    <img src="Media/Main/Tails7ExternalBackgroundGradient.png" alt="Tails7 External Gradient Icon">
+                    <b>Tails7 External Background Gradient</b> – The gradient stretches <b>upwards</b> from the <b>"shader horizon"</b>.
+                </li>
+                <li class="_GradientItem">
+                    <img src="Media/Main/Tails7InternalBackgroundGradient.png" alt="Tails7 Internal Gradient Icon">
+                    <b>Tails7 Internal Background Gradient</b> – The gradient stretches <b>downwards</b> from the <b>"shader horizon"</b>.
+                </li>
+            </ul>
+        
+            <p>Both objects work in conjunction with <b>Tails7 Render Ground</b> <i>(the object rendering the ground)</i> and <b>Tails7 Info Object</b> <i>(storing global parameters)</i>.</p>
+        
+            <hr><br>
+        
+            <h2>2. Variables</h2>
+        
+            <div class="_ContentList">
+                <div class="_ListImage">
+                    <div class="_HeaderImage" style="width: 150px; min-width: 150px;">Alterable Values</div>
+                    <div class="_HeaderDec" style="flex-grow: 1; padding-right: 20px;">Description</div>
+                </div>
+        
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_Size</code></b>
+                    </div>
+        
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> Controls the gradient’s scale along the Y axis.</p>
+                        <p><b>Default value:</b><code class="code _code-number">1.0</code></p>
+                        <p><b>A larger <code class="code _code-number">_Size</code> value results in a larger gradient height scale.</b></p>
+                    </div>
+                </div>
+            </div>
+        
+            <hr><br>
+        
+            <h2>3. Behaviors</h2>
+        
+            <p style="padding-top: 10px;">The main behavior is <b>Mapping</b>, which handles positioning, scaling, and layering.</p>
+        
+            <hr><br>
+        
+            <h2>3.1. Details: Mapping in <img src="Media/Main/Tails7ExternalBackgroundGradient.png" alt="Tails7 External Gradient Icon">Tails7 External Background Gradient</h2>
+            <br>
+            <div class="_GradientItem">
+                <h3>Animation Frame Settings</h3>
+                <div class="_code-block">
+                    <code class="_code-keyword">* Always</code><br>
+                    <code class="_code-object">Tails7 External Background Gradient</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Force animation frame to </code><code class="_code-number">1</code>
+                </div>
+                <p style="padding-left: 20px;"><b>Goal:</b> Change the animation frame from <b>icon</b> to <b>gradient texture</b>.</p>
+            </div>
+        
+            <div class="_GradientItem">
+                <h3>Layer</h3>
+                <div class="_code-block">
+                    <code class="_code-keyword">* Always</code><br>
+                    <code class="_code-object">Tails7 External Background Gradient</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Move to layer </code><code class="_code-number">1</code><br>
+                    <code class="_code-object">Tails7 External Background Gradient</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Bring to back</code>
+                </div>
+                <p style="padding-left: 20px;"><b>Goal:</b> Set the object to the first layer and place it <b>behind everything else</b>.</p>
+            </div>
+        
+            <div class="_GradientItem">
+                <h3>Scale</h3>
+                <div class="_code-block">
+                    <code class="_code-keyword">* Always</code><br>
+                    <code class="_code-object">Tails7 External Background Gradient</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Set X scale to </code><code class="_code-number">Frame Width</code><br>
+                    <code class="_code-object">Tails7 External Background Gradient</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Set Y scale to </code><code class="_code-number">( YScale( "Tails7 Render Ground" ) / 16.0 ) * _Size( "Tails7 External Background Gradient" )</code>
+                </div>
+                <p style="padding-left: 20px;"><b>X scale:</b> Width of the gradient matches the screen width.<br>
+                <b>Y scale:</b> Height depends on the <code class="code _code-number">_Size</code> parameter and the scale of <b>"Tails7 Render Ground"</b>.</p>
+            </div>
+        
+            <div class="_GradientItem">
+                <h3>Position and Rotation</h3>
+        
+                <!-- Horizon Y -->
+                <div class="_code-block">
+                    <code class="_code-keyword">* Always</code><br>
+                    <code class="_code-object">Tails7 External Background Gradient</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Set Y position to </code><code class="_code-number">Y( "Tails7 Center Pointer" ) + ( EffectParam( "Tails7 Render Ground", "_RotZ" ) * ( _RenderMinimumSize( "Tails7 Info Object" ) * ( 3.14159265 / 180.0 ) ) ) + ( ( ( EffectParam( "Tails7 Render Ground", "_Distortion" ) - 1.0 ) / ( EffectParam( "Tails7 Render Ground", "_Distortion" ) * 2.0 ) ) * _RenderMinimumSize( "Tails7 Info Object" ) )</code>
+                </div>
+                <p style="padding-left: 20px;"><b>Goal:</b> Set the Y position of the gradient at the <b>horizon level</b>.</p>
+        
+                <!-- Distortion > 0 -->
+                <div class="_code-block">
+                    <code class="_code-keyword">* Tails7 External Background Gradient: EffectParam( "Tails7 Render Ground", "_Distortion" ) > 0</code><br>
+                    <code class="_code-object">Tails7 External Background Gradient</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Set X position to </code><code class="_code-number">0</code>
+                    <br>
+                    <code class="_code-object">Tails7 External Background Gradient</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Set angle to </code><code class="_code-number">0 (Quality = 0)</code>
+                </div><p style="padding-left: 20px;"><b>X position:</b> Left corner of the screen because X scale grows left to right.<br>
+                <b>Angle:</b> Set to 0 to align the gradient from <b>bottom to top</b> via the action point.</p>
+        
+                <!-- Distortion = 0 -->
+                <div class="_code-block">
+                    <code class="_code-keyword">* Tails7 External Background Gradient: EffectParam( "Tails7 Render Ground", "_Distortion" ) = 0</code><br>
+                    <code class="_code-object">Tails7 External Background Gradient</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Set X position to </code><code class="_code-number">2147483647</code>
+                </div>
+                <p style="padding-left: 20px;"><b>X position:</b> Places the object off-screen to make it <b>invisible</b>.</p>
+        
+                <!-- Distortion < 0 -->
+                <div class="_code-block">
+                    <code class="_code-keyword">* Tails7 External Background Gradient: EffectParam( "Tails7 Render Ground", "_Distortion" ) < 0</code><br>
+                    <code class="_code-object">Tails7 External Background Gradient</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Set X position to </code><code class="_code-number">Frame Width</code>
+                    <br>
+                    <code class="_code-object">Tails7 External Background Gradient</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Set angle to </code><code class="_code-number">Set angle to 180 (Quality = 0)</code>
+                </div>
+                <p style="padding-left: 20px;"><b>X position:</b> Right corner of the screen.<br>
+                <b>Angle:</b> Set to 180 to flip the gradient and reverse X scaling (right to left).</p>
+            </div>
+        
+            <hr><br>
+        
+            <h2>3.2. Details: Mapping in <img src="Media/Main/Tails7InternalBackgroundGradient.png" alt="Tails7 Internal Gradient Icon">Tails7 Internal Background Gradient</h2>
+            <br>
+            <div class="_GradientItem">
+                <h3>Animation Frame Settings</h3>
+                <div class="_code-block">
+                    <code class="_code-keyword">* Always</code><br>
+                    <code class="_code-object">Tails7 Internal Background Gradient</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Force animation frame to </code><code class="_code-number">1</code>
+                </div>
+                <p style="padding-left: 20px;"><b>Goal:</b> Change the animation frame from <b>icon</b> to <b>gradient texture</b>.</p>
+            </div>
+        
+            <div class="_GradientItem">
+                <h3>Layer</h3>
+                <div class="_code-block">
+                    <code class="_code-keyword">* Always</code><br>
+                    <code class="_code-object">Tails7 Internal Background Gradient</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Move to layer </code><code class="_code-number">Layer("Tails7 Render Ground")</code><br>
+                    <code class="_code-object">Tails7 Internal Background Gradient</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Move in front of object Tails7 Render Ground</code>
+                </div>
+                <p style="padding-left: 20px;"><b>Goal:</b> Place this object in the same layer as <b>"Tails7 Render Ground"</b> but <b>in front of it</b> and behind others.</p>
+            </div>
+        
+            <div class="_GradientItem">
+                <h3>Scale</h3>
+                <div class="_code-block">
+                    <code class="_code-keyword">* Always</code><br>
+                    <code class="_code-object">Tails7 Internal Background Gradient</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Set X scale to </code><code class="_code-number">Frame Width</code><br>
+                    <code class="_code-object">Tails7 Internal Background Gradient</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Set Y scale to </code><code class="_code-number">( YScale( "Tails7 Render Ground" ) / 16.0 ) * _Size( "Tails7 Internal Background Gradient" )</code>
+                </div>
+                <p style="padding-left: 20px;"><b>X scale:</b> Width of the gradient matches the screen width.<br>
+                <b>Y scale:</b> Height depends on the <code class="code _code-number">_Size</code> parameter and the scale of <b>"Tails7 Render Ground"</b>.</p>
+            </div>
+        
+            <div class="_GradientItem">
+                <h3>Position and Rotation</h3>
+        
+                <!-- Horizon Y -->
+                <div class="_code-block">
+                    <code class="_code-keyword">* Always</code><br>
+                    <code class="_code-object">Tails7 Internal Background Gradient</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Set Y position to </code><code class="_code-number">Y( "Tails7 Center Pointer" ) + ( EffectParam( "Tails7 Render Ground", "_RotZ" ) * ( _RenderMinimumSize( "Tails7 Info Object" ) * ( 3.14159265 / 180.0 ) ) ) + ( ( ( EffectParam( "Tails7 Render Ground", "_Distortion" ) - 1.0 ) / ( EffectParam( "Tails7 Render Ground", "_Distortion" ) * 2.0 ) ) * _RenderMinimumSize( "Tails7 Info Object" ) )</code>
+                </div>
+                <p style="padding-left: 20px;"><b>Goal:</b> Set the Y position of the gradient at the <b>horizon level</b>.</p>
+        
+                <!-- Distortion > 0 -->
+                <div class="_code-block">
+                    <code class="_code-keyword">* Tails7 Internal Background Gradient: EffectParam( "Tails7 Render Ground", "_Distortion" ) > 0</code><br>
+                    <code class="_code-object">Tails7 Internal Background Gradient</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Set X position to </code><code class="_code-number">0</code>
+                    <br>
+                    <code class="_code-object">Tails7 Internal Background Gradient</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Set angle to </code><code class="_code-number">0 (Quality = 0)</code>
+                </div>
+                <p style="padding-left: 20px;"><b>X position:</b> Left corner of the screen.<br>
+                <b>Angle:</b> Set to 0 so the gradient flows <b>top to bottom</b>.</p>
+        
+                <!-- Distortion = 0 -->
+                <div class="_code-block">
+                    <code class="_code-keyword">* Tails7 Internal Background Gradient: EffectParam( "Tails7 Render Ground", "_Distortion" ) = 0</code><br>
+                    <code class="_code-object">Tails7 Internal Background Gradient</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Set X position to </code><code class="_code-number">2147483647</code>
+                </div>
+                <p style="padding-left: 20px;"><b>X position:</b> Moves the object off-screen to hide it.</p>
+        
+                <!-- Distortion < 0 -->
+                <div class="_code-block">
+                    <code class="_code-keyword">* Tails7 Internal Background Gradient: EffectParam( "Tails7 Render Ground", "_Distortion" ) < 0</code><br>
+                    <code class="_code-object">Tails7 Internal Background Gradient</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Set X position to </code><code class="_code-number">Frame Width</code>
+                    <br>
+                    <code class="_code-object">Tails7 Internal Background Gradient</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Set angle to </code><code class="_code-number">Set angle to 180 (Quality = 0)</code>
+                </div>
+
+                <p style="padding-left: 20px;"><b>X position:</b> Right corner of the screen.<br>
+                <b>Angle:</b> Rotated 180 degrees, gradient flows <b>right to left</b>.</p>
+            </div>
+
+        </main>
+      </div>
+    </body>
+</html>

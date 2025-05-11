@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Configuration of Objects</title>
+        <link rel="icon" href="Media/Main/Icon16.png" type="image/x-icon" />
+        <link rel="stylesheet" href="CSS/Style.css" />
+
+        <script src="Scripts/Navigation.js"></script>
+    </head>
+
+    <body>
+        <div class="_Container">
+
+        <!-- Panel boczny ####################################################### -->
+        <aside class="_Sidebar">
+
+            <!-- Logo :3 -->
+            <div class="_Logo">
+
+                <a href="Index.html">
+                    <img src="Media/Main/Logo.png" alt="Logo" />
+                </a>
+
+            </div>
+
+            <!-- Pasek boczny z opcjami (lista!!!) -->
+            <nav class="_Navigation">
+                <ul>
+                    <!-- Strona główna -->
+                    <li><a href="Index.html">Homepage</a></li>
+                    <hr/>
+            
+                    <!-- Instrukcje -->
+                    <li>
+                        <a href="Instructions.html">Instructions</a>
+                        <ul>
+                            <li><a href="Instructions_1.html">What is Tails7?</a></li>
+                            <li><a href="Instructions_2.html">Engine Limits and Known Issues</a></li>
+                        </ul>
+                    </li>
+                    <hr/>
+            
+                    <!-- Rozpoczęcie pracy -->
+                    <li>
+                        <a href="GettingStarted.html">Getting Started</a>
+                    </li>
+                    <hr/>
+            
+                    <!-- Konfiguracja obiektów -->
+                    <li>
+                        <a href="ConfigurationObjects.html">Configuration of Objects</a>
+                        <ul>
+                            <li><a href="ConfigurationObjects_1.html">Player Hitbox</a></li>
+                            <li><a href="ConfigurationObjects_2.html">Tails7 Info Object</a></li>
+                            <li><a href="ConfigurationObjects_3.html">Tails7 Render Ground</a></li>
+                            <li><a href="ConfigurationObjects_4.html">Tails7 Mapper Object</a></li>
+                            <li><a href="ConfigurationObjects_5.html">Tails7 Camera Object</a></li>
+                            <li><a href="ConfigurationObjects_6.html">Tails7 Center Pointer</a></li>
+                            <li><a href="ConfigurationObjects_7.html">Tails7 Background Gradient</a></li>
+                            <li><a href="ConfigurationObjects_8.html">Sprite Objects</a></li>
+                            <li><a href="ConfigurationObjects_9.html">Fade Objects</a></li>
+                            <li><a href="ConfigurationObjects_10.html">Line Objects</a></li>
+                        </ul>
+                    </li>
+                    <!--<hr/>-->
+            
+                    <!-- Kalkulacja mapowania -->
+                    <li>
+                        <!--<a href="MappingCalculation.html">Mapping Calculation</a>-->
+                    </li>
+                    <hr/>
+            
+                    <!-- Poradniki -->
+                    <li>
+                        <a href="Tutorials.html">Tutorials</a>
+                        <ul>
+                            <li><a href="Tutorials_1.html">Object Mapping Basics</a></li>
+                            <li><a href="Tutorials_2.html">Creating Fade Effects</a></li>
+                            <li><a href="Tutorials_3.html">Working with Lines</a></li>
+                            <li><a href="Tutorials_4.html">Changing Game Resolution</a></li>
+                            <li><a href="Tutorials_5.html">Background Objects Setup</a></li>
+                            <!--<li><a href="Tutorials_6.html">Camera Configuration</a></li>-->
+                            <!--<li><a href="Tutorials_7.html">3D Sound Implementation</a></li>-->
+                            <!--<li><a href="Tutorials_8.html">Particle Systems</a></li>-->
+                            <!--<li><a href="Tutorials_9.html">Interactive Objects (Pick-ups)</a></li>-->
+                            <!--<li><a href="Tutorials_10.html">Making Gun and Weapon</a></li>-->
+                            <!--<li><a href="Tutorials_11.html">Creating a HUD</a></li>-->
+                            <!--<li><a href="Tutorials_12.html">Elevation System (Z-axis)</a></li> These tutorials will be introduced soon--> 
+                            <li><a href="Tutorials_13.html">Ground Texture Swapping</a></li>
+                        </ul>
+                    </li>
+                    <hr/>
+            
+                    <!-- Przykłady -->
+                    <li>
+                        <a href="Examples.html">Examples</a>
+                    </li>
+                    <hr/>
+            
+                    <!-- Dodatkowe sekcje -->
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="About.html">About</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Pasek do zmiany szerokości (≧∇≦)ﾉ -->
+        <div class="_Resizer"></div>            <script src="Scripts/Resizer.js"></script>
+
+        <!-- Górny pasek (kolorki) #######################################################-->
+        <header class="_Header">
+
+            <div class="_Header_Text">
+                Copyright © 2025 Foxioo<br>
+                Official documentation of the Tails7 for version R1.0.1<br/>
+            </div>
+
+        </header>
+
+        <!-- Główna zawartość strony #####################################################-->
+
+        <main class="_Content">
+
+            <h1>Configuration of Objects</h1>
+        
+            <p>This page provides essential information about key embedded objects and their basic functions.</p>
+            
+            <div class="_ContentList">
+        
+                <!-- Nagłówek listy -->
+                <div class="_ListImage">
+                    <div class="_HeaderImage" style="width: 100px; min-width: 100px; margin-right: 20px;">Icon</div>
+                    <div class="_HeaderDec" style="flex-grow: 1; padding-right: 20px;">Description</div>
+                    <div class="_HeaderButton" style="min-width: 100px; text-align: center;">Link</div>
+                </div>
+                
+                <!-- Player Hitbox -->
+                <div class="_ListItem">
+                    <div class="_ItemImage">
+                        <img src="Media/Main/PlayerHitbox.png" alt="Player Hitbox Icon">
+                    </div>
+                    <div class="_ItemDec">
+                        <h3>Player Hitbox</h3>
+                        <p>Basic collision detection object for checking interactions with other game elements.</p>
+                    </div>
+                    <div class="_ItemLink">
+                        <a href="ConfigurationObjects_1.html" class="_LinkButton">More Info</a>
+                    </div>
+                </div>
+        
+                <!-- Tails7 Info Object -->
+                <div class="_ListItem">
+                    <div class="_ItemImage">
+                        <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon">
+                    </div>
+                    <div class="_ItemDec">
+                        <h3>Tails7 Info Object</h3>
+                        <p>Initializes and creates the Tails7 Render Ground object. Contains basic configuration settings.</p>
+                    </div>
+                    <div class="_ItemLink">
+                        <a href="ConfigurationObjects_2.html" class="_LinkButton">More Info</a>
+                    </div>
+                </div>
+        
+                <!-- Tails7 Render Ground -->
+                <div class="_ListItem">
+                    <div class="_ItemImage">
+                        <img src="Media/Main/Tails7RenderGround.png" alt="Tails7 Render Ground Icon">
+                    </div>
+                    <div class="_ItemDec">
+                        <h3>Tails7 Render Ground</h3>
+                        <p>Main Mode7-style shader object creating perspective projection. Most calculations are based on this object.</p>
+                    </div>
+                    <div class="_ItemLink">
+                        <a href="ConfigurationObjects_3.html" class="_LinkButton">More Info</a>
+                    </div>
+                </div>
+        
+                <!-- Tails7 Mapper Object -->
+                <div class="_ListItem">
+                    <div class="_ItemImage">
+                        <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon">
+                    </div>
+                    <div class="_ItemDec">
+                        <h3>Tails7 Mapper Object</h3>
+                        <p>Responsible for all calculations and mapping of 3D.Objects <b>(i.e. Sprite Objects)</b> on the screen.</p>
+                    </div>
+                    <div class="_ItemLink">
+                        <a href="ConfigurationObjects_4.html" class="_LinkButton">More Info</a>
+                    </div>
+                </div>
+        
+                <!-- Tails7 Camera Object -->
+                <div class="_ListItem">
+                    <div class="_ItemImage">
+                        <img src="Media/Main/Tails7CameraObject.png" alt="Tails7 Camera Object Icon">
+                    </div>
+                    <div class="_ItemDec">
+                        <h3>Tails7 Camera Object</h3>
+                        <p>Sets the coordinates of the X/Y position and reports the rotation of the X axis.</p>
+                    </div>
+                    <div class="_ItemLink">
+                        <a href="ConfigurationObjects_5.html" class="_LinkButton">More Info</a>
+                    </div>
+                </div>
+        
+                <!-- Tails7 Center Pointer -->
+                <div class="_ListItem">
+                    <div class="_ItemImage">
+                        <img src="Media/Main/Tails7CenterPointer.png" alt="Tails7 Center Pointer Icon">
+                    </div>
+                    <div class="_ItemDec">
+                        <h3>Tails7 Center Pointer</h3>
+                        <p>Automatically selects default Render Ground and positions itself at screen center.</p>
+                    </div>
+                    <div class="_ItemLink">
+                        <a href="ConfigurationObjects_6.html" class="_LinkButton">More Info</a>
+                    </div>
+                </div>
+
+                <!-- Gradient Objects -->
+                <div class="_ListItem">
+                    <div class="_ItemImage">
+                        <img src="Media/Main/Tails7ExternalBackgroundGradient.png" alt="Fade Lonely Objects Icon"><br>
+                        <img src="Media/Main/Tails7InternalBackgroundGradient.png" alt="Fade Requiring Objects Icon">
+                    </div>
+                    <div class="_ItemDec">
+                        <h3>Tails7 Background Gradient</h3>
+                        <p>Objects that overlay a gradient on the screen.<br>
+                        <b>External:</b> Applies a gradient from the shader horizon to the <b>top</b>.<br>
+                        <b>Internal:</b> Applies a gradient from the shader horizon to the <b>bottom</b>.</p>
+                    </div>
+                    <div class="_ItemLink">
+                        <a href="ConfigurationObjects_7.html" class="_LinkButton">More Info</a>
+                    </div>
+                </div>
+        
+                <!-- Sprite Objects -->
+                <div class="_ListItem">
+                    <div class="_ItemImage">
+                        <img src="Media/Main/SpriteObjects.png" alt="Sprite Objects Icon">
+                    </div>
+                    <div class="_ItemDec">
+                        <h3>Sprite Objects</h3>
+                        <p>Basic elements that get perspective-mapped to screen coordinates.</p>
+                    </div>
+                    <div class="_ItemLink">
+                        <a href="ConfigurationObjects_8.html" class="_LinkButton">More Info</a>
+                    </div>
+                </div>
+        
+                <!-- Fade Objects -->
+                <div class="_ListItem">
+                    <div class="_ItemImage">
+                        <img src="Media/Main/FadeLonelyObjects.png" alt="Fade Lonely Objects Icon"><br>
+                        <img src="Media/Main/FadeRequiringObjects.png" alt="Fade Requiring Objects Icon">
+                    </div>
+                    <div class="_ItemDec">
+                        <h3>Fade Objects</h3>
+                        <p>Shader-based 3D wall illusion using quad geometry.<br>
+                        <b>Lonely:</b> Self-contained with predefined points<br>
+                        <b>Requiring:</b> Needs manual point declaration</p>
+                    </div>
+                    <div class="_ItemLink">
+                        <a href="ConfigurationObjects_9.html" class="_LinkButton">More Info</a>
+                    </div>
+                </div>
+        
+                <!-- Line Objects -->
+                <div class="_ListItem">
+                    <div class="_ItemImage">
+                        <img src="Media/Main/LineObjects.png" alt="Line Objects Icon">
+                    </div>
+                    <div class="_ItemDec">
+                        <h3>Line Objects</h3>
+                        <p>Draws simple lines between two specified screen points.</p>
+                    </div>
+                    <div class="_ItemLink">
+                        <a href="ConfigurationObjects_10.html" class="_LinkButton">More Info</a>
+                    </div>
+                </div>
+        
+            </div>
+        </main>
+
+      </div>
+    </body>
+</html>

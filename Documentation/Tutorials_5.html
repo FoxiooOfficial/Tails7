@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tutorial</title>
+        <link rel="icon" href="Media/Main/Icon16.png" type="image/x-icon" />
+        <link rel="stylesheet" href="CSS/Style.css" />
+
+        <script src="Scripts/Navigation.js"></script>
+    </head>
+
+    <body>
+        <div class="_Container">
+
+        <!-- Panel boczny ####################################################### -->
+        <aside class="_Sidebar">
+
+            <!-- Logo :3 -->
+            <div class="_Logo">
+
+                <a href="Index.html">
+                    <img src="Media/Main/Logo.png" alt="Logo" />
+                </a>
+
+            </div>
+
+            <!-- Pasek boczny z opcjami (lista!!!) -->
+            <nav class="_Navigation">
+                <ul>
+                    <!-- Strona główna -->
+                    <li><a href="Index.html">Homepage</a></li>
+                    <hr/>
+            
+                    <!-- Instrukcje -->
+                    <li>
+                        <a href="Instructions.html">Instructions</a>
+                        <ul>
+                            <li><a href="Instructions_1.html">What is Tails7?</a></li>
+                            <li><a href="Instructions_2.html">Engine Limits and Known Issues</a></li>
+                        </ul>
+                    </li>
+                    <hr/>
+            
+                    <!-- Rozpoczęcie pracy -->
+                    <li>
+                        <a href="GettingStarted.html">Getting Started</a>
+                    </li>
+                    <hr/>
+            
+                    <!-- Konfiguracja obiektów -->
+                    <li>
+                        <a href="ConfigurationObjects.html">Configuration of Objects</a>
+                        <ul>
+                            <li><a href="ConfigurationObjects_1.html">Player Hitbox</a></li>
+                            <li><a href="ConfigurationObjects_2.html">Tails7 Info Object</a></li>
+                            <li><a href="ConfigurationObjects_3.html">Tails7 Render Ground</a></li>
+                            <li><a href="ConfigurationObjects_4.html">Tails7 Mapper Object</a></li>
+                            <li><a href="ConfigurationObjects_5.html">Tails7 Camera Object</a></li>
+                            <li><a href="ConfigurationObjects_6.html">Tails7 Center Pointer</a></li>
+                            <li><a href="ConfigurationObjects_7.html">Tails7 Background Gradient</a></li>
+                            <li><a href="ConfigurationObjects_8.html">Sprite Objects</a></li>
+                            <li><a href="ConfigurationObjects_9.html">Fade Objects</a></li>
+                            <li><a href="ConfigurationObjects_10.html">Line Objects</a></li>
+                        </ul>
+                    </li>
+                    <!--<hr/>-->
+            
+                    <!-- Kalkulacja mapowania -->
+                    <li>
+                        <!--<a href="MappingCalculation.html">Mapping Calculation</a>-->
+                    </li>
+                    <hr/>
+            
+                    <!-- Poradniki -->
+                    <li>
+                        <a href="Tutorials.html">Tutorials</a>
+                        <ul>
+                            <li><a href="Tutorials_1.html">Object Mapping Basics</a></li>
+                            <li><a href="Tutorials_2.html">Creating Fade Effects</a></li>
+                            <li><a href="Tutorials_3.html">Working with Lines</a></li>
+                            <li><a href="Tutorials_4.html">Changing Game Resolution</a></li>
+                            <li><a href="Tutorials_5.html">Background Objects Setup</a></li>
+                            <!--<li><a href="Tutorials_6.html">Camera Configuration</a></li>-->
+                            <!--<li><a href="Tutorials_7.html">3D Sound Implementation</a></li>-->
+                            <!--<li><a href="Tutorials_8.html">Particle Systems</a></li>-->
+                            <!--<li><a href="Tutorials_9.html">Interactive Objects (Pick-ups)</a></li>-->
+                            <!--<li><a href="Tutorials_10.html">Making Gun and Weapon</a></li>-->
+                            <!--<li><a href="Tutorials_11.html">Creating a HUD</a></li>-->
+                            <!--<li><a href="Tutorials_12.html">Elevation System (Z-axis)</a></li> These tutorials will be introduced soon--> 
+                            <li><a href="Tutorials_13.html">Ground Texture Swapping</a></li>
+                        </ul>
+                    </li>
+                    <hr/>
+            
+                    <!-- Przykłady -->
+                    <li>
+                        <a href="Examples.html">Examples</a>
+                    </li>
+                    <hr/>
+            
+                    <!-- Dodatkowe sekcje -->
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="About.html">About</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Pasek do zmiany szerokości (≧∇≦)ﾉ -->
+        <div class="_Resizer"></div>            <script src="Scripts/Resizer.js"></script>
+
+        <!-- Górny pasek (kolorki) #######################################################-->
+        <header class="_Header">
+
+            <div class="_Header_Text">
+                Copyright © 2025 Foxioo<br>
+                Official documentation of the Tails7 for version R1.0.1<br/>
+            </div>
+
+        </header>
+
+        <!-- Główna zawartość strony #####################################################-->
+        <main class="_Content">
+
+            <h1>Background Objects Setup</h1>
+            <p>
+            <h3>Tu dowiesz siejak zrobić obiekty tła.</code></h3>
+            <p></p>
+            
+                <p>W tym poradniku stworzę słońce i księżyc który będą się obracać wokół nieba. Najpierw robie duplikat <code class="code _code-object">(Sprite) Blue Dog</code>.</p>
+                        <img src="Media/Tut/5/1.png"><br>
+
+                <p><br>Zmieniam nazwę duplikatu i właczam flagę by ikona się sama aktulizowała.</p>
+
+                        <img src="Media/Tut/5/2.png"><br>
+
+                <p><br>Zmieniam teksturę tego obiektu:</p>
+
+                        <img src="Media/Tut/5/3.png" width="100%"><br>
+
+                <p><br>Po uruchomieniu tak to powinno wyglądać:</p>
+
+                        <img src="Media/Tut/5/4.png"  width="100%"><br>
+
+                 <p><br>Tworzę duplikat słońca i zmieniam teksturę na księżyc</p>       
+
+                        <img src="Media/Tut/5/7.png"><br>
+
+                <p><br>Zmieniam tryby tych obiektów na przeznaczony dla tła:</p>        
+
+                <img src="Media/Tut/5/5.png"><br>
+
+                <p><br>W <b>Event Editor</b> tworzę prostę wydarzenie:</p>       
+                
+                <img src="Media/Tut/5/6.png"><br>
+
+                <video width="70%" height="70%" controls>
+                    <source src="Media/Tut/5/v1.mkv" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video> 
+
+        </main>
+      </div>
+    </body>
+</html>

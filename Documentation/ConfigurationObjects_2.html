@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tails7 Info Object</title>
+        <link rel="icon" href="Media/Main/Icon16.png" type="image/x-icon" />
+        <link rel="stylesheet" href="CSS/Style.css" />
+
+        <script src="Scripts/Navigation.js"></script>
+    </head>
+
+    <body>
+        <div class="_Container">
+
+        <!-- Panel boczny ####################################################### -->
+        <aside class="_Sidebar">
+
+            <!-- Logo :3 -->
+            <div class="_Logo">
+
+                <a href="Index.html">
+                    <img src="Media/Main/Logo.png" alt="Logo" />
+                </a>
+
+            </div>
+
+            <!-- Pasek boczny z opcjami (lista!!!) -->
+            <nav class="_Navigation">
+                <ul>
+                    <!-- Strona główna -->
+                    <li><a href="Index.html">Homepage</a></li>
+                    <hr/>
+            
+                    <!-- Instrukcje -->
+                    <li>
+                        <a href="Instructions.html">Instructions</a>
+                        <ul>
+                            <li><a href="Instructions_1.html">What is Tails7?</a></li>
+                            <li><a href="Instructions_2.html">Engine Limits and Known Issues</a></li>
+                        </ul>
+                    </li>
+                    <hr/>
+            
+                    <!-- Rozpoczęcie pracy -->
+                    <li>
+                        <a href="GettingStarted.html">Getting Started</a>
+                    </li>
+                    <hr/>
+            
+                    <!-- Konfiguracja obiektów -->
+                    <li>
+                        <a href="ConfigurationObjects.html">Configuration of Objects</a>
+                        <ul>
+                            <li><a href="ConfigurationObjects_1.html">Player Hitbox</a></li>
+                            <li><a href="ConfigurationObjects_2.html">Tails7 Info Object</a></li>
+                            <li><a href="ConfigurationObjects_3.html">Tails7 Render Ground</a></li>
+                            <li><a href="ConfigurationObjects_4.html">Tails7 Mapper Object</a></li>
+                            <li><a href="ConfigurationObjects_5.html">Tails7 Camera Object</a></li>
+                            <li><a href="ConfigurationObjects_6.html">Tails7 Center Pointer</a></li>
+                            <li><a href="ConfigurationObjects_7.html">Tails7 Background Gradient</a></li>
+                            <li><a href="ConfigurationObjects_8.html">Sprite Objects</a></li>
+                            <li><a href="ConfigurationObjects_9.html">Fade Objects</a></li>
+                            <li><a href="ConfigurationObjects_10.html">Line Objects</a></li>
+                        </ul>
+                    </li>
+                    <!--<hr/>-->
+            
+                    <!-- Kalkulacja mapowania -->
+                    <li>
+                        <!--<a href="MappingCalculation.html">Mapping Calculation</a>-->
+                    </li>
+                    <hr/>
+            
+                    <!-- Poradniki -->
+                    <li>
+                        <a href="Tutorials.html">Tutorials</a>
+                        <ul>
+                            <li><a href="Tutorials_1.html">Object Mapping Basics</a></li>
+                            <li><a href="Tutorials_2.html">Creating Fade Effects</a></li>
+                            <li><a href="Tutorials_3.html">Working with Lines</a></li>
+                            <li><a href="Tutorials_4.html">Changing Game Resolution</a></li>
+                            <li><a href="Tutorials_5.html">Background Objects Setup</a></li>
+                            <!--<li><a href="Tutorials_6.html">Camera Configuration</a></li>-->
+                            <!--<li><a href="Tutorials_7.html">3D Sound Implementation</a></li>-->
+                            <!--<li><a href="Tutorials_8.html">Particle Systems</a></li>-->
+                            <!--<li><a href="Tutorials_9.html">Interactive Objects (Pick-ups)</a></li>-->
+                            <!--<li><a href="Tutorials_10.html">Making Gun and Weapon</a></li>-->
+                            <!--<li><a href="Tutorials_11.html">Creating a HUD</a></li>-->
+                            <!--<li><a href="Tutorials_12.html">Elevation System (Z-axis)</a></li> These tutorials will be introduced soon--> 
+                            <li><a href="Tutorials_13.html">Ground Texture Swapping</a></li>
+                        </ul>
+                    </li>
+                    <hr/>
+            
+                    <!-- Przykłady -->
+                    <li>
+                        <a href="Examples.html">Examples</a>
+                    </li>
+                    <hr/>
+            
+                    <!-- Dodatkowe sekcje -->
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="About.html">About</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Pasek do zmiany szerokości (≧∇≦)ﾉ -->
+        <div class="_Resizer"></div>            <script src="Scripts/Resizer.js"></script>
+
+        <!-- Górny pasek (kolorki) #######################################################-->
+        <header class="_Header">
+
+            <div class="_Header_Text">
+                Copyright © 2025 Foxioo<br>
+                Official documentation of the Tails7 for version R1.0.1<br/>
+            </div>
+
+        </header>
+
+        <!-- Główna zawartość strony #####################################################-->
+        <main class="_Content">
+
+            <h1><img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"> Tails7 Info Object</h1>
+
+            <hr><br>
+            <h2>1. General Description of Object</h2>
+        
+            <p style="padding-top: 10px;">
+                <b>Tails7 Mapper Object</b> is an object that stores values such as shader parameters, resolution information and can actulize <img src="Media/Main/Tails7RenderGround.png" alt="Tails7 Render Ground Icon"><b>Tails7 Render Ground</b>
+            </p>
+
+            <hr><br>
+            
+            <h2>2. Variables</h2>
+
+            <div class="_ContentList">
+                <div class="_ListImage">
+                    <div class="_HeaderImage" style="width: 150px; min-width: 150px;">Alterable Values</div>
+                    <div class="_HeaderDec" style="flex-grow: 1; padding-right: 20px;">Description</div>
+                </div>
+                
+                <!-- _WorldScale -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_WorldScale</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable is responsible for the density of objects between them, the larger it is the objects are closer together.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">1.0</code></p>
+                    </div>
+                </div>
+
+                <!-- _LayerZTarget -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_LayerZTarget</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable determines the target position of object <img src="Media/Main/Tails7RenderGround.png" alt="Tails7 Render Ground Icon"><code class="code _code-object">Tails7 Render Ground</code> on the layers.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">2</code></p>
+                    </div>
+                </div>
+
+                <!-- _PosX -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_PosX</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This value informs Position X <code class="code _code-number">_PosX</code> variable for the shader.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _PosY -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_PosY</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This value informs Position Y <code class="code _code-number">_PosY</code> variable for the shader.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _PosZ -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_PosZ</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This value informs and sets Position Z <code class="code _code-number">_PosZ</code> variable for the shader.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">1.0 (Half Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _RotX -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_RotX</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This value informs and sets Rotation X <code class="code _code-number">_RotX</code> variable for the shader.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Half Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _RotY -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_RotY</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This value informs and sets Rotation Y <code class="code _code-number">_RotY</code> variable for the shader.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Half Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _RotZ -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_RotZ</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This value informs and sets Rotation Z <code class="code _code-number">_RotZ</code> variable for the shader.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Half Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _Distortion -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_Distortion</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This value informs and sets Distortion <code class="code _code-number">_Distortion</code> variable for the shader.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">1.0 (Half Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _RotXPointX -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_RotXPointX</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> Value reserved for future, currently does not work.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0</code></p>
+                    </div>
+                </div>
+
+                <!-- _RotXPointY -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_RotXPointY</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> Value reserved for future, currently does not work.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0</code></p>
+                    </div>
+                </div>
+
+                <!-- _RotYPointX -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_RotYPointX</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> Value reserved for future, currently does not work.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0</code></p>
+                    </div>
+                </div>
+
+                <!-- _RotYPointY -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_RotYPointY</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> Value reserved for future, currently does not work.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0</code></p>
+                    </div>
+                </div>
+
+                <!-- _Scale -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_Scale</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This value informs and sets Scale <code class="code _code-number">_Scale</code> variable for the shader.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">1.0</code></p>
+                    </div>
+                </div>
+
+                <!-- _ScaleX -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_ScaleX</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This value informs and sets Scale X <code class="code _code-number">_ScaleX</code> variable for the shader.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">1.0</code></p>
+                    </div>
+                </div>
+
+                <!-- _ScaleY -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_ScaleY</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This value informs and sets Scale Y <code class="code _code-number">_ScaleY</code> variable for the shader.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">1.0</code></p>
+                    </div>
+                </div>                
+
+                <!-- _PosOffsetX -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_PosOffsetX</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> Value reserved for future, currently does not work.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0</code></p>
+                    </div>
+                </div>
+
+                <!-- _PosOffsetY -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_PosOffsetY</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> Value reserved for future, currently does not work.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0</code></p>
+                    </div>
+                </div>
+
+                <!-- _TextureID -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_PosOffsetY</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> Variable that sets the current texture from the given ID.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0</code></p>
+                    </div>
+                </div>
+
+                <!-- _TextureSizeX -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_TextureSizeX</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> A variable that sets the size of the texture in pixels.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">1024</code></p>
+                    </div>
+                </div>
+
+                <!-- _TextureSizeY -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_TextureSizeY</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> A variable that sets the size of the texture in pixels.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">1024</code></p>
+                    </div>
+                </div>
+
+                <!-- _ResolutionX -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_ResolutionX</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable declares what width of window you are targeting.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">1280</code></p>
+                    </div>
+                </div>
+
+                <!-- _ResolutionY -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_ResolutionY</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable declares what height of window you are targeting.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">720</code></p>
+                    </div>
+                </div>
+
+                <!-- _RenderMinimumSize -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_RenderMinimumSize</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable selects the minimum value between <code class="code _code-number">Frame Width</code> and <code class="code _code-number">Frame Height</code>.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _RenderMiddleSizeX -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_RenderMiddleSizeX</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> The variable returns <code class="code _code-number">Frame Width / 2.0</code>.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _RenderMiddleSizeY -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_RenderMiddleSizeY</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> The variable returns <code class="code _code-number">Frame Height / 2.0</code>.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _ScaleFactorX -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_ScaleFactorX</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> The variable returns <code class="code _code-number">Frame Width / _ResolutionX</code>.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _ScaleFactorY -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_ScaleFactorY</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> The variable returns <code class="code _code-number">Frame Height / _ResolutionY</code>.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                
+                <!-- _WidthRatio -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_WidthRatio</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> The variable returns <code class="code _code-number">Frame Width / 320.0</code>.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                
+                <!-- _AspectCorrection -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_AspectCorrection</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> The variable returns <code class="code _code-number">( 1.25 - _WidthRatio - 1.0 ) * 0.3 </code>.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0 (Automatic)</code></p>
+                    </div>
+                </div>
+            </div>
+
+                        <!-- /////////////////////////////////////////////// -->
+
+            <div class="_ContentList">
+                <div class="_ListImage">
+                    <div class="_HeaderImage" style="width: 150px; min-width: 150px;">Alterable Strings</div>
+                    <div class="_HeaderDec" style="flex-grow: 1; padding-right: 20px;">Description</div>
+                </div>
+                
+                <!-- _Version -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">_Version</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> String parameter.</p>
+                        <p><b>Function:</b> Includes information about the current version of Tails7.</p>
+                        <p><b>Default value:</b> <code class="code _code-string">R1.0.1_10.05.25a</code></p>
+                    </div>
+                </div>
+
+                <!-- _API -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">_API</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> String parameter.</p>
+                        <p><b>Function:</b> Returns information about the current graphics API in use <code class="code _code-string">(CPU, DirectDraw, Direct3D8, Direct3D9 or Direct3D11)</code>.</p>
+                        <p><b>Default value:</b> <code class="code _code-string">(Automatic)</code></p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- /////////////////////////////////////////////// -->
+
+            <div class="_ContentList">
+                <div class="_ListImage">
+                    <div class="_HeaderImage" style="width: 120px; min-width: 120px; margin-left: 30px;">Flags</div>
+                    <div class="_HeaderDec" style="flex-grow: 1; padding-right: 20px;">Description</div>
+                </div>
+
+                <!-- _Update -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-bool">_Update</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Bool parameter.</p>
+                        <p><b>Function:</b> This variable set to True will cause <img src="/Media/Main/Tails7RenderGround.png"><code class="code _code-object">Tails7 Render Ground</code> objects to be deleted and created again to fill the whole screen.</p>
+                        <p><b>Default value:</b> <code class="code _code-bool">False</code></p>
+                    </div>
+                </div>
+
+                <!-- _IsUpdating -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-bool">_IsUpdating</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Bool parameter.</p>
+                        <p><b>Function:</b> This flag is set automatically when the create function <img src="/Media/Main/Tails7RenderGround.png"><code class="code _code-object">Tails7 Render Ground</code> is active.</p>
+                        <p><b>Default value:</b> <code class="code _code-bool">False (Automatic)</code></p>
+                    </div>
+                </div>
+
+
+                            <h2>3. Behaviors</h2>
+
+            <br><hr>
+
+            <!-- ************************************************************************ -->
+
+            <h2 style="padding-top: 10px">3.1. Details: Mapping Mode in <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon">Tails7 Mapper Object</h2>
+            <br>
+            <p>This behavior declares how, for a given object, the computation of the position transformation into a transformed result giving the depth effect is to behave.</p>
+
+            <h3>List of available modes:</h3>
+
+
+
+        </main>
+      </div>
+    </body>
+</html>

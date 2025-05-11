@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tails7 Mapper Object</title>
+        <link rel="icon" href="Media/Main/Icon16.png" type="image/x-icon" />
+        <link rel="stylesheet" href="CSS/Style.css" />
+
+        <script src="Scripts/Navigation.js"></script>
+    </head>
+
+    <body>
+        <div class="_Container">
+
+        <!-- Panel boczny ####################################################### -->
+        <aside class="_Sidebar">
+
+            <!-- Logo :3 -->
+            <div class="_Logo">
+
+                <a href="Index.html">
+                    <img src="Media/Main/Logo.png" alt="Logo" />
+                </a>
+
+            </div>
+
+            <!-- Pasek boczny z opcjami (lista!!!) -->
+            <nav class="_Navigation">
+                <ul>
+                    <!-- Strona główna -->
+                    <li><a href="Index.html">Homepage</a></li>
+                    <hr/>
+            
+                    <!-- Instrukcje -->
+                    <li>
+                        <a href="Instructions.html">Instructions</a>
+                        <ul>
+                            <li><a href="Instructions_1.html">What is Tails7?</a></li>
+                            <li><a href="Instructions_2.html">Engine Limits and Known Issues</a></li>
+                        </ul>
+                    </li>
+                    <hr/>
+            
+                    <!-- Rozpoczęcie pracy -->
+                    <li>
+                        <a href="GettingStarted.html">Getting Started</a>
+                    </li>
+                    <hr/>
+            
+                    <!-- Konfiguracja obiektów -->
+                    <li>
+                        <a href="ConfigurationObjects.html">Configuration of Objects</a>
+                        <ul>
+                            <li><a href="ConfigurationObjects_1.html">Player Hitbox</a></li>
+                            <li><a href="ConfigurationObjects_2.html">Tails7 Info Object</a></li>
+                            <li><a href="ConfigurationObjects_3.html">Tails7 Render Ground</a></li>
+                            <li><a href="ConfigurationObjects_4.html">Tails7 Mapper Object</a></li>
+                            <li><a href="ConfigurationObjects_5.html">Tails7 Camera Object</a></li>
+                            <li><a href="ConfigurationObjects_6.html">Tails7 Center Pointer</a></li>
+                            <li><a href="ConfigurationObjects_7.html">Tails7 Background Gradient</a></li>
+                            <li><a href="ConfigurationObjects_8.html">Sprite Objects</a></li>
+                            <li><a href="ConfigurationObjects_9.html">Fade Objects</a></li>
+                            <li><a href="ConfigurationObjects_10.html">Line Objects</a></li>
+                        </ul>
+                    </li>
+                    <!--<hr/>-->
+            
+                    <!-- Kalkulacja mapowania -->
+                    <li>
+                        <!--<a href="MappingCalculation.html">Mapping Calculation</a>-->
+                    </li>
+                    <hr/>
+            
+                    <!-- Poradniki -->
+                    <li>
+                        <a href="Tutorials.html">Tutorials</a>
+                        <ul>
+                            <li><a href="Tutorials_1.html">Object Mapping Basics</a></li>
+                            <li><a href="Tutorials_2.html">Creating Fade Effects</a></li>
+                            <li><a href="Tutorials_3.html">Working with Lines</a></li>
+                            <li><a href="Tutorials_4.html">Changing Game Resolution</a></li>
+                            <li><a href="Tutorials_5.html">Background Objects Setup</a></li>
+                            <!--<li><a href="Tutorials_6.html">Camera Configuration</a></li>-->
+                            <!--<li><a href="Tutorials_7.html">3D Sound Implementation</a></li>-->
+                            <!--<li><a href="Tutorials_8.html">Particle Systems</a></li>-->
+                            <!--<li><a href="Tutorials_9.html">Interactive Objects (Pick-ups)</a></li>-->
+                            <!--<li><a href="Tutorials_10.html">Making Gun and Weapon</a></li>-->
+                            <!--<li><a href="Tutorials_11.html">Creating a HUD</a></li>-->
+                            <!--<li><a href="Tutorials_12.html">Elevation System (Z-axis)</a></li> These tutorials will be introduced soon--> 
+                            <li><a href="Tutorials_13.html">Ground Texture Swapping</a></li>
+                        </ul>
+                    </li>
+                    <hr/>
+            
+                    <!-- Przykłady -->
+                    <li>
+                        <a href="Examples.html">Examples</a>
+                    </li>
+                    <hr/>
+            
+                    <!-- Dodatkowe sekcje -->
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="About.html">About</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Pasek do zmiany szerokości (≧∇≦)ﾉ -->
+        <div class="_Resizer"></div>            <script src="Scripts/Resizer.js"></script>
+
+        <!-- Górny pasek (kolorki) #######################################################-->
+        <header class="_Header">
+
+            <div class="_Header_Text">
+                Copyright © 2025 Foxioo<br>
+                Official documentation of the Tails7 for version R1.0.1<br/>
+            </div>
+
+        </header>
+
+        <!-- Główna zawartość strony #####################################################-->
+        <main class="_Content">
+
+            <h1><img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"> Tails7 Mapper Object</h1>
+
+            <hr><br>
+            <h2>1. General Description of Object</h2>
+        
+            <p style="padding-top: 10px;">
+                <b>Tails7 Mapper Object</b> is an object that is responsible for <b>all</b> calculations of mapped objects <i>(That is, objects with the Group.3D Objects group)</i> including setting the position, scale and its visibility.
+            </p>
+
+            <hr><br>
+            
+            <h2>2. Variables</h2>
+
+            <h3 style="padding-top: 10px">ℹ️ This object has the same variables as the mapped objects because it itself belongs to <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon">Group.3D Objects.</h3>
+            <p>For this object, I do not recommend changing the values of the variables!</p>
+
+            <br><hr><br>
+        
+            <h2>3. Behaviors</h2>
+
+            <br><hr>
+
+            <!-- ************************************************************************ -->
+
+            <h2 style="padding-top: 10px">3.1. Details: Mapping Mode in <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon">Tails7 Mapper Object</h2>
+            <br>
+            <p>This behavior declares how, for a given object, the computation of the position transformation into a transformed result giving the depth effect is to behave.</p>
+
+            <h3>List of available modes:</h3>
+            
+            <div class="_ContentList">
+                <!-- Nagłówek listy -->
+                <div class="_ListImage">
+                    <div class="_HeaderImage" style="width: 110px; min-width: 110px; margin-right: 20px; margin-left: 20px;">Mode</div>
+                    <div class="_HeaderDec" style="flex-grow: 1; padding-right: 20px;">Description</div>
+                </div>
+
+                <!-- R1.0.1 -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">R1.0.1</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        
+                        <p><b>
+                            The main mode that transforms the position given by the variables <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_PositionX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_PositionY</code>
+                            and adjusts the calculations so that the result matches the shader.
+                            <br>
+                            <i>
+                            Primarily used for ground-based objects (for example: walls, props, platforms, etc.).
+                            </i>
+                        </b></p>
+
+                        <br>
+
+                        <b>Description of the operation of this mode:</b>
+
+                        <br><br>
+
+                        <ul style="padding-left: 30px;">
+                            <li>
+                                First, compute the distance into the variable <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_Distance</code> using the values <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistanceX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistanceY</code>.
+                            </li>
+                            <li>
+                                Next, transform the current position <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_PositionX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_PositionY</code> by applying a rotation based on <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-number">_RotX</code>, storing the results
+                                in <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_RotPosX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_RotPosY</code>.
+                                <br>
+                                <b>Additionally, these values are divided by <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-number">_PosZ</code>.</b>
+                            </li>
+                            <li>
+                                Then we calculate the "shader-style" curvature via the function <code class="code _code-function">Fun_Mode7</code>. This value is normalized by the height of the object <img src="Media/Main/Tails7RenderGround.png" alt="Tails7 Render Ground Icon"><code class="code _code-object">Tails7 Render Ground</code> and multiplied by <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-number">_Distortion</code>. The resulting curvature
+                                is stored in <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_InY</code>.
+                            </li>
+                            <li>
+                                We then apply this distortion to <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_RotPosX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_RotPosY</code>, writing the final values into <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistortedX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistortedY</code>.
+                                At this stage, we add the value <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_OffsetY</code> to <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistortedY</code> this shifts the object up and down to create the depths effect.
+                            </li>
+                            <li>
+                                Next, for <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_OutX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_OutY</code>, we compute the on-screen center point relative to the main object <img src="Media/Main/Tails7RenderGround.png" alt="Tails7 Render Ground Icon"><code class="code _code-object">Tails7 Render Ground</code>, selected by <img src="Media/Main/Tails7CenterPointer.png" alt="Tails7 Center Pointer Icon"><code class="code _code-object">Tails7 Center Pointer</code>.
+                                These values are then added to or subtracted from (depending on X or Y) the <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistortedX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistortedY</code> offsets.
+                            </li>
+                            <li>
+                                Finally, we compute <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalY</code>. To <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalX</code> we add the horizontal shift <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_OffsetX</code>, and to
+                                <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalY</code> we add the value <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-number">_RotZ</code> <i>(note that <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-number">_RotZ</code> is not an actual rotation around the Z axis but a vertical shift along Y)</i>.
+                            </li>
+                            <li>
+                                We also calculate the angle <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_Angle</code> representing how much we are rotated from a point by <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistanceX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistanceY</code>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- R1.0.1_SKY -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">R1.0.1_SKY</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        
+                        <p><b>
+                            An additional mode that transforms the position given by <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_PositionX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_PositionY</code> but does not apply the <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-number">_PosZ</code> modification.
+                            <br>
+                            <i>
+                            Primarily used for background and sky elements (for example: clouds, sun, stars, mountains, etc.).
+                            </i>
+                        </b></p>
+
+                        <br>
+
+                        <b>Description of the operation of this mode:</b>
+
+                        <br><br>
+
+                        <ul style="padding-left: 30px;">
+                            <li>
+                                First, compute the distance into <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_Distance</code> using <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistanceX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistanceY</code>.
+                            </li>
+                            <li>
+                                Next, transform the current position <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_PositionX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_PositionY</code> by applying a rotation based on <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-number">_RotX</code>, storing the results
+                                in <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_RotPosX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_RotPosY</code>.
+                                <br>
+                                <b>Here there is no division by <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-number">_PosZ</code>, so the object remains fixed regardless of height.</b>
+                            </li>
+                            <li>
+                                Then calculate the curvature via <code class="code _code-function">Fun_Mode7</code>, normalize it by the height of <img src="Media/Main/Tails7RenderGround.png" alt="Tails7 Render Ground Icon"><code class="code _code-object">Tails7 Render Ground</code>, and multiply by <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_Distortion</code>. Store the result in <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_InY</code>.
+                            </li>
+                            <li>
+                                Apply this distortion to <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_RotPosX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_RotPosY</code>, writing into <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistortedX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistortedY</code>, then add <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_OffsetY</code> to <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistortedY</code> for the vertical depths effect.
+                            </li>
+                            <li>
+                                Compute <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_OutX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_OutY</code> by finding the screen center relative to <img src="Media/Main/Tails7RenderGround.png" alt="Tails7 Render Ground Icon"><code class="code _code-object">Tails7 Render Ground</code> (selected by <img src="Media/Main/Tails7CenterPointer.png" alt="Tails7 Center Pointer Icon"><code class="code _code-object">Tails7 Center Pointer</code>), then add or subtract <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistortedX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistortedY</code>.
+                            </li>
+                            <li>
+                                Finally, calculate <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalY</code>. Add <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_OffsetX</code> to <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalX</code> and <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-number">_RotZ</code> to <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalY</code> <i>(again, <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-number">_RotZ</code> is a vertical shift, not a true Z-axis rotation)</i>.
+                            </li>
+                            <li>
+                                We also calculate the angle <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_Angle</code> representing how much we are rotated from a point by <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistanceX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistanceY</code>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                </div>  
+            
+            <!-- ************************************************************************ -->
+
+            <br><hr><br>
+
+            <h2 style="padding-top: 10px">3.2. Details: Mapping Screen Mode in <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon">Tails7 Mapper Object</h2>
+            <br>
+            <p>This behavior declares how the object is to behave <b>AFTER</b> the calculation with Mapping Mode <i>(that is, it modifies the <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalY</code> variables).</i></p>
+
+            <h3>List of available modes:</h3>
+
+            <div class="_ContentList">
+                <!-- Nagłówek listy -->
+                <div class="_ListImage">
+                    <div class="_HeaderImage" style="width: 110px; min-width: 110px; margin-right: 20px; margin-left: 20px;">Mode</div>
+                    <div class="_HeaderDec" style="flex-grow: 1; padding-right: 20px;">Description</div>
+                </div>
+                
+                <!-- DEFAULT -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">DEFAULT</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            <b>
+                            The default mode; does not modify the values of <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalY</code>.
+                            </b>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CLAMP -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">CLAMP</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            <b>
+                            This mode uses the <code class="code _code-function">range</code> function and applies it to both <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalY</code>.
+                            </b>
+                        </p>
+                        
+                        <br>
+
+                        <b>Description of this mode’s operation:</b>
+
+                        <br><br>
+
+                        <ul style="padding-left: 30px;">
+                            <li>
+                                <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalX</code> is clamped between <code class="code _code-number">0</code> and <code class="code _code-number">Frame Width</code>
+                                <b>(i.e., it cannot be less than <code class="code _code-number">0</code> or greater than the screen width)</b>.
+                            </li>
+                            <li>
+                                <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalY</code> is clamped between <code class="code _code-number">0</code> and <code class="code _code-number">Frame Height</code>
+                                <b>(i.e., it cannot be less than <code class="code _code-number">0</code> or greater than the screen height)</b>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CLAMPX -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">CLAMPX</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            <b>
+                            This mode uses the <code class="code _code-function">range</code> function and applies it only to <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalX</code>; <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalY</code> remains unmodified.
+                            </b>
+                        </p>
+
+                        <br>
+
+                        <b>Description of this mode’s operation:</b>
+
+                        <br><br>
+
+                        <ul style="padding-left: 30px;">
+                            <li>
+                                <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalX</code> is clamped between <code class="code _code-number">0</code> and <code class="code _code-number">Frame Width</code>
+                                <b>(i.e., it cannot be less than <code class="code _code-number">0</code> or greater than the screen width)</b>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CLAMPY -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">CLAMPY</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            <b>
+                            This mode uses the <code class="code _code-function">range</code> function and applies it only to <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalY</code>; <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalX</code> remains unmodified.
+                            </b>
+                        </p>
+
+                        <br>
+                        <b>Description of this mode’s operation:</b>
+                        <br><br>
+
+                        <ul style="padding-left: 30px;">
+                            <li>
+                                <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalY</code> is clamped between <code class="code _code-number">0</code> and <code class="code _code-number">Frame Height</code>
+                                <b>(i.e., it cannot be less than <code class="code _code-number">0</code> or greater than the screen height)</b>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- INVERTED -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">INVERTED</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            <b>
+                            This mode inverts <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalY</code> relative to the screen dimensions.
+                            </b>
+                        </p>
+                        
+                        <br>
+
+                        <b>Description of this mode’s operation:</b>
+
+                        <br><br>
+
+                        <ul style="padding-left: 30px;">
+                            <li>
+                                <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalX</code> is calculated as <code class="code _code-number">Frame Width - <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon">_FinalX</code>
+                                <b>(i.e., mirrored across the screen width)</b>.
+                            </li>
+                            <li>
+                                <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalY</code> is calculated as <code class="code _code-number">Frame Height - <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon">_FinalY</code>
+                                <b>(i.e., mirrored across the screen height)</b>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- INVERTEDX -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">INVERTEDX</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            <b>
+                            This mode inverts only <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalX</code> relative to the screen width; <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalY</code> remains unmodified.
+                            </b>
+                        </p>
+
+                        <br>
+
+                        <b>Description of this mode’s operation:</b>
+
+                        <br><br>
+
+                        <ul style="padding-left: 30px;">
+                            <li>
+                                <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalX</code> is calculated as <code class="code _code-number">Frame Width - <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon">_FinalX</code>
+                                <b>(i.e., mirrored across the screen width)</b>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- INVERTEDY -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">INVERTEDY</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            <b>
+                            This mode inverts only <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalY</code> relative to the screen height; <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalX</code> remains unmodified.
+                            </b>
+                        </p>
+
+                        <br>
+
+                        <b>Description of this mode’s operation:</b>
+
+                        <br><br>
+
+                        <ul style="padding-left: 30px;">
+                            <li>
+                                <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_FinalY</code> is calculated as <code class="code _code-number">Frame Height - <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon">_FinalY</code>
+                                <b>(i.e., mirrored across the screen height)</b>.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            
+            </div>
+
+            <!-- ************************************************************************ -->
+
+            <br><hr><br>
+
+            <h2 style="padding-top: 10px">3.3. Details: Distance Mode in <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon">Tails7 Mapper Object</h2>
+            <br>
+            <p>This behavior determines how it should calculate the distance for the <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistanceX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistanceY</code> variables.</p>
+            
+            <h3>List of available modes:</h3>
+
+            <div class="_ContentList">
+                <!-- Nagłówek listy -->
+                <div class="_ListImage">
+                    <div class="_HeaderImage" style="width: 110px; min-width: 110px; margin-right: 20px; margin-left: 20px;">Mode</div>
+                    <div class="_HeaderDec" style="flex-grow: 1; padding-right: 20px;">Description</div>
+                </div>
+                
+                <!-- DEFAULT -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">DEFAULT</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            <b>
+                            By default, calculates the distance between the <img src="Media/Main/Tails7CameraObject.png" alt="Tails7 Camera Object Icon"><code class="code _code-object">Tails7 Camera Object</code> position and the point given by <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_PositionX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_PositionY</code>. These values are also divided by <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-number">_WorldScale</code>.
+                            </b>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- STATIC -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">STATIC</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            <b>
+                            This mode does not calculate distance; it simply sets <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistanceX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistanceY</code> to the values of <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_PositionX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_PositionY</code>.
+                            </b>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ************************************************************************ -->
+
+            <br><hr><br>
+
+            <h2 style="padding-top: 10px">3.4. Details: Scale Mode in <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon">Tails7 Mapper Object</h2>
+            <br>
+            <p>This behavior determines how it should calculate the scale for the <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_Scale</code>, <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_ScaleX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_ScaleY</code> variables.</p>
+
+            <h3>List of available modes:</h3>
+
+            <div class="_ContentList">
+                <!-- Nagłówek listy -->
+                <div class="_ListImage">
+                    <div class="_HeaderImage" style="width: 110px; min-width: 110px; margin-right: 20px; margin-left: 20px;">Mode</div>
+                    <div class="_HeaderDec" style="flex-grow: 1; padding-right: 20px;">Description</div>
+                </div>
+                                
+                <!-- DEFAULT -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">DEFAULT</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            <b>
+                            The default mode that adjusts the scale given by <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_Scale</code>, <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_ScaleX</code>, and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_ScaleY</code> so that it matches the distance by the distortion value <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_InY</code> and the position <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-number">_PosZ</code>.
+                            </b>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- STATIC -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">STATIC</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            <b>
+                            Similar to <code class="code _code-string">DEFAULT</code>, this mode adjusts the scale given by <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_Scale</code>, <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_ScaleX</code>, and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_ScaleY</code>, but it does not depend on the distortion value <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_InY</code> or the position <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-number">_PosZ</code>.
+                            </b>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- RES -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">RES</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            <b>
+                            Based on the raw values <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_Scale</code>, <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_ScaleX</code>, and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_ScaleY</code>, this mode also takes into account <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-number">_ResolutionX</code>, <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-number">_ResolutionY</code>, <code class="code _code-number">Frame Width</code>, and <code class="code _code-number">Frame Height</code>. As a result, the scale may differ separately for X and Y on different screen resolutions.
+                            </b>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FACTOR -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">FACTOR</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            <b>
+                            Similar to <code class="code _code-string">RES</code>, this mode takes into account <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-number">_ScaleFactorX</code>, <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-number">_ScaleFactorY</code>, <code class="code _code-number">Frame Width</code>, and <code class="code _code-number">Frame Height</code>, which means the scale can vary separately for X and Y different screen resolutions.
+                            </b>
+                        </p>
+                    </div>
+                </div>
+  
+            </div>
+
+            <!-- ************************************************************************ -->
+
+            <br><hr><br>
+
+            <h2 style="padding-top: 10px">3.5. Details: Layer Mode in <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon">Tails7 Mapper Object</h2>
+            <br>
+            <p>This behavior determines how objects on the screen should be layered.</p>
+
+            <h3>List of available modes:</h3>
+
+            <div class="_ContentList">
+                <!-- Nagłówek listy -->
+                <div class="_ListImage">
+                    <div class="_HeaderImage" style="width: 110px; min-width: 110px; margin-right: 20px; margin-left: 20px;">Mode</div>
+                    <div class="_HeaderDec" style="flex-grow: 1; padding-right: 20px;">Description</div>
+                </div>
+                
+                <!-- TOCAMERA -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">TOCAMERA</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            <b>
+                                This mode sets layer ordering based on the position of the <img src="Media/Main/Tails7CameraObject.png" alt="Tails7 Camera Object Icon"><code class="code _code-object">Tails7 Camera Object</code>. Objects closer to the camera object will be <b>FRONT</b> those that are further away and will be <b>BEHIND</b>. These calculations are stored in <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_LayerDistance</code>, and the viewing angles in <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_AngleVisiblity</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_AngularVisibility</code>.
+                            </b>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- STATIC -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">STATIC</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            <b>
+                                This mode sets layer ordering based on the object’s own position by computing distance using only <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_PositionX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_PositionY</code>. These calculations are stored in <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_LayerDistance</code>, and the viewing angles in <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_AngleVisiblity</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_AngularVisibility</code>.
+                            </b>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- TOLAYER -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">TOLAYER</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            <b>
+                                This mode sets layer ordering based on the position of the <img src="Media/Main/PlayerHitbox.png" alt="Player Hitbox Icon"><code class="code _code-object">Player Hitbox</code>. Objects closer to the player hitbox will be <b>FRONT</b> those that are further away and will be <b>BEHIND</b>. These calculations are stored in <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_LayerDistance</code>, and the viewing angles in <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_AngleVisiblity</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_AngularVisibility</code>.
+                            </b>
+                        </p>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="_GradientItem">
+                <h3>Also, there is an event that always actulizes layers by <img src="Media/Main/LayerObject.png" alt="Layer Object Icon">Layer Object.</h3>
+                <div class="_code-block">
+                    <code class="_code-keyword">* Always</code><br>
+                    <code class="_code-object">Group.3D Objects</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Set _Layer to </code><code class="_code-number">16777216 - _LayerDistance( "Group.3D Objects" ) + _LayerOffset( "Group.3D Objects" )
+                    </code>
+                    <br>
+                    <code class="_code-object">Layer object</code><code class="_code-operator">: </code>
+                    <code class="_code-function">Decreasing Sort by </code><code class="_code-number">Alterable Value T</code>
+                    <code class="_code-operator">: </code>
+                    <code class="_code-function">non-alts default to </code><code class="_code-number">0</code>
+                </div>
+                </p>
+            </div>
+
+            <!-- ************************************************************************ -->
+
+            <br><hr><br>
+
+            <h2 style="padding-top: 10px">3.6. Details: Visible Mode in <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon">Tails7 Mapper Object</h2>
+            <br>
+            <p>This behavior determined when an object should be visible or not.</p>
+
+            <h3>List of available modes:</h3>
+
+            <div class="_ContentList">
+                <!-- Nagłówek listy -->
+                <div class="_ListImage">
+                    <div class="_HeaderImage" style="width: 110px; min-width: 110px; margin-right: 20px; margin-left: 20px;">Mode</div>
+                    <div class="_HeaderDec" style="flex-grow: 1; padding-right: 20px;">Description</div>
+                </div>
+                <!-- DEFAULT -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">DEFAULT</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            <b>
+                                This mode determines when the object should have the <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-bool">_Visible</code> flag enabled. It depends on whether the <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_AngularVisiblity</code> angle is <code class="code _code-number"><= 100°</code> or <code class="code _code-number">>= 260°</code>, and on whether the object's position is on-screen or off-screen. It automatically sets the object's visibility.
+                            </b>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- DEFAULTEX -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">DEFAULTEX</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            <b>
+                            This mode is similar to <code class="code _code-string">DEFAULT</code>, but it does not automatically set the object's visibility.
+                            </b>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CLOSEFADE -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">CLOSEFADE</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            <b>
+                                This mode determines when the object should have the <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-bool">_Visible</code> flag enabled. It depends on whether the <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_AngularVisiblity</code> angle is <code class="code _code-number"><= 100°</code> or <code class="code _code-number">>= 260°</code>. It automatically sets the object's visibility.
+                            </b>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CLOSEFADEEX -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">CLOSEFADEEX</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            <b>
+                                This mode is similar to <code class="code _code-string">CLOSEFADE</code>, but it does not automatically set the object's visibility.
+                            </b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+      </div>
+    </body>
+</html>

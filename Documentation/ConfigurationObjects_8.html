@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sprite Objects</title>
+        <link rel="icon" href="Media/Main/Icon16.png" type="image/x-icon" />
+        <link rel="stylesheet" href="CSS/Style.css" />
+
+        <script src="Scripts/Navigation.js"></script>
+    </head>
+
+    <body>
+        <div class="_Container">
+
+        <!-- Panel boczny ####################################################### -->
+        <aside class="_Sidebar">
+
+            <!-- Logo :3 -->
+            <div class="_Logo">
+
+                <a href="Index.html">
+                    <img src="Media/Main/Logo.png" alt="Logo" />
+                </a>
+
+            </div>
+
+            <!-- Pasek boczny z opcjami (lista!!!) -->
+            <nav class="_Navigation">
+                <ul>
+                    <!-- Strona główna -->
+                    <li><a href="Index.html">Homepage</a></li>
+                    <hr/>
+            
+                    <!-- Instrukcje -->
+                    <li>
+                        <a href="Instructions.html">Instructions</a>
+                        <ul>
+                            <li><a href="Instructions_1.html">What is Tails7?</a></li>
+                            <li><a href="Instructions_2.html">Engine Limits and Known Issues</a></li>
+                        </ul>
+                    </li>
+                    <hr/>
+            
+                    <!-- Rozpoczęcie pracy -->
+                    <li>
+                        <a href="GettingStarted.html">Getting Started</a>
+                    </li>
+                    <hr/>
+            
+                    <!-- Konfiguracja obiektów -->
+                    <li>
+                        <a href="ConfigurationObjects.html">Configuration of Objects</a>
+                        <ul>
+                            <li><a href="ConfigurationObjects_1.html">Player Hitbox</a></li>
+                            <li><a href="ConfigurationObjects_2.html">Tails7 Info Object</a></li>
+                            <li><a href="ConfigurationObjects_3.html">Tails7 Render Ground</a></li>
+                            <li><a href="ConfigurationObjects_4.html">Tails7 Mapper Object</a></li>
+                            <li><a href="ConfigurationObjects_5.html">Tails7 Camera Object</a></li>
+                            <li><a href="ConfigurationObjects_6.html">Tails7 Center Pointer</a></li>
+                            <li><a href="ConfigurationObjects_7.html">Tails7 Background Gradient</a></li>
+                            <li><a href="ConfigurationObjects_8.html">Sprite Objects</a></li>
+                            <li><a href="ConfigurationObjects_9.html">Fade Objects</a></li>
+                            <li><a href="ConfigurationObjects_10.html">Line Objects</a></li>
+                        </ul>
+                    </li>
+                    <!--<hr/>-->
+            
+                    <!-- Kalkulacja mapowania -->
+                    <li>
+                        <!--<a href="MappingCalculation.html">Mapping Calculation</a>-->
+                    </li>
+                    <hr/>
+            
+                    <!-- Poradniki -->
+                    <li>
+                        <a href="Tutorials.html">Tutorials</a>
+                        <ul>
+                            <li><a href="Tutorials_1.html">Object Mapping Basics</a></li>
+                            <li><a href="Tutorials_2.html">Creating Fade Effects</a></li>
+                            <li><a href="Tutorials_3.html">Working with Lines</a></li>
+                            <li><a href="Tutorials_4.html">Changing Game Resolution</a></li>
+                            <li><a href="Tutorials_5.html">Background Objects Setup</a></li>
+                            <!--<li><a href="Tutorials_6.html">Camera Configuration</a></li>-->
+                            <!--<li><a href="Tutorials_7.html">3D Sound Implementation</a></li>-->
+                            <!--<li><a href="Tutorials_8.html">Particle Systems</a></li>-->
+                            <!--<li><a href="Tutorials_9.html">Interactive Objects (Pick-ups)</a></li>-->
+                            <!--<li><a href="Tutorials_10.html">Making Gun and Weapon</a></li>-->
+                            <!--<li><a href="Tutorials_11.html">Creating a HUD</a></li>-->
+                            <!--<li><a href="Tutorials_12.html">Elevation System (Z-axis)</a></li> These tutorials will be introduced soon--> 
+                            <li><a href="Tutorials_13.html">Ground Texture Swapping</a></li>
+                        </ul>
+                    </li>
+                    <hr/>
+            
+                    <!-- Przykłady -->
+                    <li>
+                        <a href="Examples.html">Examples</a>
+                    </li>
+                    <hr/>
+            
+                    <!-- Dodatkowe sekcje -->
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="About.html">About</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Pasek do zmiany szerokości (≧∇≦)ﾉ -->
+        <div class="_Resizer"></div>            <script src="Scripts/Resizer.js"></script>
+
+        <!-- Górny pasek (kolorki) #######################################################-->
+        <header class="_Header">
+
+            <div class="_Header_Text">
+                Copyright © 2025 Foxioo<br>
+                Official documentation of the Tails7 for version R1.0.1<br/>
+            </div>
+
+        </header>
+
+        <!-- Główna zawartość strony #####################################################-->
+        <main class="_Content">
+
+            <h1><img src="Media/Main/SpriteObjects.png" alt="Sprite Objects Icon"> Sprite Objects</h1>
+
+            <hr><br>
+            <h2>1. General Description of Object</h2>
+
+            <p style="padding-top: 10px;">
+                <b>Sprite Objects</b> are, in other words, objects belonging to the <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-object">Group.3D Objects</code>.
+                They enable on-screen mapping that gives depth.
+                <br>
+                <b>
+                    All behaviors related to these objects are performed by the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-object">Tails7 Mapper Object</code>.
+                </b>
+            </p>
+
+            <hr><br>
+
+            <!-- ******************************************************* -->
+
+            <h2>2. Variables</h2>
+
+            <div class="_ContentList">
+                <div class="_ListImage">
+                    <div class="_HeaderImage" style="width: 150px; min-width: 150px;">Alterable Values</div>
+                    <div class="_HeaderDec" style="flex-grow: 1; padding-right: 20px;">Description</div>
+                </div>
+                
+                <!-- _PositionX -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_PositionX</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable specifies where the object should be positioned on the <b>X</b>-axis.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0</code></p>
+                    </div>
+                </div>
+
+                <!-- _PositionY -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_PositionY</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable specifies where the object should be positioned on the <b>Y</b>-axis.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0</code></p>
+                    </div>
+                </div>
+
+                    <!-- _OffsetX -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_OffsetX</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable shifts the object along the <b>X</b>-axis on the screen after the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Mapping Mode</code> calculations.</p>
+                        <p><i>(Positive values shift to the <b>right</b>, negative values shift to the <b>left</b>.)</i></p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0</code></p>
+                    </div>
+                </div>
+
+                <!-- _OffsetY -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_OffsetY</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable shifts the object along the <b>Y</b>-axis on the screen after the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Mapping Mode</code> calculations.</p>
+                        <p><i>(Positive values shift <b>down</b>, negative values shift <b>up</b>.)</i></p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0</code></p>
+                    </div>
+                </div>
+
+                <!-- _Scale -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_Scale</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable multiplies <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_ScaleX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_ScaleY</code> values.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">1.0</code></p>
+                    </div>
+                </div>
+
+                <!-- _ScaleX -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_ScaleX</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable represents the object's scale along the <b>X</b>-axis.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">1.0</code></p>
+                    </div>
+                </div>
+
+                <!-- _ScaleY -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_ScaleY</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable represents the object's scale along the <b>Y</b>-axis.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">1.0</code></p>
+                    </div>
+                </div>
+
+                <!-- _LayerOffset -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_LayerOffset</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable specifies the layer offset: negative values allow the object to render <b>behind</b> objects behind it, and positive values allow it to render <b>above</b> objects in front of it.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0</code></p>
+                    </div>
+                </div>
+
+                <!-- _RenderDistance -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_RenderDistance</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable determines when to set the <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-bool">_OutRenderDistance</code> flag. If this value is <b>less than</b> <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_LayerDistance</code>, it sets <code class="code _code-bool">_OutRenderDistance</code> to <code class="code _code-bool">False</code>; otherwise to <code class="code _code-bool">True</code>. Setting it to <code class="code _code-number">-1.0</code> disables changes to <code class="code _code-bool">_OutRenderDistance</code> <i>(Note: this flag may indicate object visibility)</i>.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">-1.0</code></p>
+                    </div>
+                </div>
+
+                <!-- _Distance -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_Distance</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable is automatically calculated by the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Mapping Mode</code> behavior; it computes the distance from <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistanceX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistanceY</code>.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _DistanceX -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_DistanceX</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable is automatically calculated by the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Distance Mode</code> behavior; it computes the distance along the <b>X</b>-axis for the <code class="code _code-keyword">Mapping Mode</code> calculations.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _DistanceY -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_DistanceY</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable is automatically calculated by the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Distance Mode</code> behavior; it computes the distance along the <b>Y</b>-axis for the <code class="code _code-keyword">Mapping Mode</code> calculations.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _RotPosX -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_RotPosX</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable is automatically calculated by the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Distance Mode</code> behavior; it rotates the <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_PositionX</code> point by the <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-number">_RotZ</code> value.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _RotPosY -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_RotPosY</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable is automatically calculated by the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Distance Mode</code> behavior; it rotates the <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_PositionY</code> point by the <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-number">_RotZ</code> value.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _InY -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_InY</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable is automatically calculated by the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Distance Mode</code> behavior; it computes the shader-like distortion of the point, based on the <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-number">_Distortion</code> variable.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _DistortedX -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_DistortedX</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable is automatically calculated by the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Distance Mode</code> behavior; it is based on <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_RotPosX</code> but modified by <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_InY</code>.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _DistortedY -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_DistortedY</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable is automatically calculated by the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Distance Mode</code> behavior; it is based on <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_RotPosY</code> but modified by <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_InY</code>.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _OutX -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_OutX</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable is automatically calculated by the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Distance Mode</code> behavior; it is based on <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistanceX</code> but centered on the <img src="Media/Main/Tails7RenderGround.png" alt="Tails7 Render Ground Icon"><code class="code _code-object">Tails7 Render Ground</code> position.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _OutY -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_OutY</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable is automatically calculated by the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Distance Mode</code> behavior; it is based on <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_DistanceY</code> but shifted to the <img src="Media/Main/Tails7RenderGround.png" alt="Tails7 Render Ground Icon"><code class="code _code-object">Tails7 Render Ground</code> position.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _FinalX -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_FinalX</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable is automatically calculated by the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Distance Mode</code> behavior; its value is the <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_OutX</code> modified by the <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_OffsetX</code> variable.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _FinalY -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_FinalY</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable is automatically calculated by the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Distance Mode</code> behavior; its value is the <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_OutY</code> modified by the <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-number">_RotZ</code> variable.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _LayerDistance -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_LayerDistance</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable is automatically calculated by the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Layer Mode</code> behavior; it specifies the individual distance used for layer calculations.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _Layer -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_Layer</code></b>
+                    </div>
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable is automatically calculated by the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Layer Mode</code> behavior; it determines the current layer of the object for the <img src="Media/Main/LayerObject.png" alt="Layer Object Icon"><code class="code _code-keyword">Layer Object</code>.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _Angle -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_Angle</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable is automatically calculated by the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Distance Mode</code> behavior; it determines the visibility angle of the object based on the <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_PositionX</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_PositionY</code> points.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _Angular -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_Angular</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable is automatically calculated by the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Mapping Mode</code> behavior; it corrects the <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_Angle</code> value to ensure it falls within the range <code class="code _code-number">0.0</code> to <code class="code _code-number">360.0</code>.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _AngleVisibility -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_AngleVisibility</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable is automatically calculated by the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Visible Mode</code> behavior; it specifies the visibility angle of the object.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _AngularVisibility -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_AngularVisibility</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable is automatically calculated by the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Visible Mode</code> behavior; it corrects the <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_AngleVisibility</code> value to ensure it falls within the range <code class="code _code-number">0.0</code> to <code class="code _code-number">360.0</code>.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- /////////////////////////////////////////////// -->
+
+            <div class="_ContentList">
+                <div class="_ListImage">
+                    <div class="_HeaderImage" style="width: 150px; min-width: 150px;">Alterable Strings</div>
+                    <div class="_HeaderDec" style="flex-grow: 1; padding-right: 20px;">Description</div>
+                </div>
+                
+                <!-- _MappingScreenMode -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">_MappingScreenMode</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> String parameter.</p>
+                        <p><b>Function:</b> Responsible for selecting the mode in which the object is displayed on the screen, based on the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Mapping Screen Mode</code> behavior.</p>
+                        <p><b>Default value:</b> <code class="code _code-string">DEFAULT</code></p>
+                    </div>
+                </div>
+
+                <!-- _MappingMode -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">_MappingMode</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> String parameter.</p>
+                        <p><b>Function:</b> Responsible for selecting the mode in which the object is mapped, based on the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Mapping Mode</code> behavior.</p>
+                        <p><b>Default value:</b> <code class="code _code-string">R1.0.1</code></p>
+                    </div>
+                </div>
+
+                <!-- _DistanceMode -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">_DistanceMode</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> String parameter.</p>
+                        <p><b>Function:</b> Responsible for selecting the mode used to calculate distance for the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Mapping Mode</code> behavior, based on the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Distance Mode</code> behavior.</p>
+                        <p><b>Default value:</b> <code class="code _code-string">DEFAULT</code></p>
+                    </div>
+                </div>
+
+                <!-- _ScaleMode -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">_ScaleMode</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> String parameter.</p>
+                        <p><b>Function:</b> Responsible for selecting the mode in which the object is scaled, based on the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Scale Mode</code> behavior.</p>
+                        <p><b>Default value:</b> <code class="code _code-string">DEFAULT</code></p>
+                    </div>
+                </div>
+
+                <!-- _LayerMode -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">_LayerMode</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> String parameter.</p>
+                        <p><b>Function:</b> Responsible for selecting which layer the object should reside on, based on the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Layer Mode</code> behavior.</p>
+                        <p><b>Default value:</b> <code class="code _code-string">TOPLAYER</code></p>
+                    </div>
+                </div>
+
+                <!-- _VisibleMode -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">_VisibleMode</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> String parameter.</p>
+                        <p><b>Function:</b> Responsible for selecting the mode when the object should be visible, based on the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Visible Mode</code> behavior.</p>
+                        <p><b>Default value:</b> <code class="code _code-string">DEFAULT</code></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- /////////////////////////////////////////////// -->
+
+            <div class="_ContentList">
+                <div class="_ListImage">
+                    <div class="_HeaderImage" style="width: 120px; min-width: 120px; margin-left: 30px;">Flags</div>
+                    <div class="_HeaderDec" style="flex-grow: 1; padding-right: 20px;">Description</div>
+                </div>
+
+                <!-- _Active -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-bool">_Active</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Bool parameter.</p>
+                        <p><b>Function:</b> This variable specifies whether object mapping should be active; when set to <code class="code _code-bool">True</code>, it continuously updates the positioning on the screen, and when set to <code class="code _code-bool">False</code>, it does not update the object's position on the screen.</p>
+                        <p><b>Default value:</b> <code class="code _code-bool">True</code></p>
+                    </div>
+                </div>
+
+                <!-- _ShouldVisible -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-bool">_ShouldVisible</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Bool parameter.</p>
+                        <p><b>Function:</b> This variable is automatically calculated by the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Visible Mode</code> behavior; it determines whether the object is visible on the screen based on whether <code class="code _code-number">_AngularVisibility</code> is less than <b>100°</b> or greater than <b>260°</b>.</p>
+                        <p><b>Default value:</b> <code class="code _code-bool">False (Automatic)</code></p>
+                    </div>
+                </div>
+                
+                <!-- _IgnoreShowing -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-bool">_IgnoreShowing</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Bool parameter.</p>
+                        <p><b>Function:</b> This variable specifies whether to disable the automatic visibility control of the object; when set to <code class="code _code-bool">True</code>, automatic visibility is turned off.</p>
+                        <p><b>Default value:</b> <code class="code _code-bool">False</code></p>
+                    </div>
+                </div>
+
+                <!-- _OutRenderDistance -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-bool">_OutRenderDistance</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Bool parameter.</p>
+                        <p><b>Function:</b> This variable is automatically calculated by the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Visible Mode</code> behavior; it indicates whether the <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-bool">_RenderDistance</code> has been exceeded.</p>
+                        <p><b>Default value:</b> <code class="code _code-bool">False (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _Visible -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-bool">_Visible</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Bool parameter.</p>
+                        <p><b>Function:</b> This variable is automatically calculated by the <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon"><code class="code _code-keyword">Visible Mode</code> behavior; it determines whether the object should ultimately be visible on the screen.</p>
+                        <p><b>Default value:</b> <code class="code _code-bool">False (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _QualityScale -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-bool">_QualityScale</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Bool parameter.</p>
+                        <p><b>Function:</b> This variable specifies whether to use anti-aliasing when scaling the object; when set to <code class="code _code-bool">True</code>, anti-aliasing is applied, and when set to <code class="code _code-bool">False</code>, scaling is done without anti-aliasing, resulting in a pixelated appearance.</p>
+                        <p><b>Default value:</b> <code class="code _code-bool">False</code></p>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+        </main>
+      </div>
+    </body>
+</html>
