@@ -11,7 +11,6 @@
 ## 📚 Table of contents
 - [About](#-about)
 - [Installation](#-installation)
-- [How to Build](#-how-to-build)
 - [Reports And Ideas](#-reports-and-ideas)
 - [License](#-license)
 
@@ -32,7 +31,31 @@
 
 ## 💿 Installation
 
-## 📝 How to Build
+1. Press **Code** -> **Download ZIP**.
+
+<img src="Documentation/Media/Install/1.png" alt="Installation: 1" width="75%">
+
+2. Extract the ZIP file of the project
+
+<img src="Documentation/Media/Install/2.png" alt="Installation: 2" width="75%">
+
+3. In Clickteam Fusion, go to **Tools** -> **Windwos Explorer**.
+
+<img src="Documentation/Media/Install/3.png" alt="Installation: 3" width="75%">
+
+4. From the Tails7 folder, go to **Shader** and flip the **Foxioo Shader Pack** folder.
+
+<img src="Documentation/Media/Install/4.png" alt="Installation: 4" width="75%">
+
+5. in Clickteam Fusion refresh the effects list, there should be a folder **Foxioo Shader Pack**.
+
+*(There are only 4 shaders in this Repo, don't notice that there are many more in the screenshot)*
+
+<img src="Documentation/Media/Install/5.png" alt="Installation: 5" width="75%">
+
+6. Run **Tails7.mfa** in Clickteam Fusion and compile the program
+
+<img src="Documentation/Media/Install/6.png" alt="Installation: 6" width="75%">
 
 ## ❗ Reports And Ideas
 
