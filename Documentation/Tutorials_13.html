@@ -34,13 +34,13 @@
                     <hr/>
             
                     <!-- Instrukcje -->
-                    <li>
-                        <a href="Instructions.html">Instructions</a>
+                    <!--<li>-->
+                        <!--<a href="Instructions.html">Instructions</a>-->
                         <ul>
                             <li><a href="Instructions_1.html">What is Tails7?</a></li>
                             <li><a href="Instructions_2.html">Engine Limits and Known Issues</a></li>
                         </ul>
-                    </li>
+                    <!--</li>-->
                     <hr/>
             
                     <!-- Rozpoczęcie pracy -->
@@ -61,7 +61,7 @@
                             <li><a href="ConfigurationObjects_6.html">Tails7 Center Pointer</a></li>
                             <li><a href="ConfigurationObjects_7.html">Tails7 Background Gradient</a></li>
                             <li><a href="ConfigurationObjects_8.html">Sprite Objects</a></li>
-                            <li><a href="ConfigurationObjects_9.html">Fade Objects</a></li>
+                            <li><a href="ConfigurationObjects_9.html">Polygon Objects</a></li>
                             <li><a href="ConfigurationObjects_10.html">Line Objects</a></li>
                         </ul>
                     </li>
@@ -78,8 +78,8 @@
                         <a href="Tutorials.html">Tutorials</a>
                         <ul>
                             <li><a href="Tutorials_1.html">Object Mapping Basics</a></li>
-                            <li><a href="Tutorials_2.html">Creating Fade Effects</a></li>
-                            <li><a href="Tutorials_3.html">Working with Lines</a></li>
+                            <li><a href="Tutorials_2.html">Creating Polygon Effects</a></li>
+                            <!--<li><a href="Tutorials_3.html">Working with Lines</a></li>-->
                             <li><a href="Tutorials_4.html">Changing Game Resolution</a></li>
                             <li><a href="Tutorials_5.html">Background Objects Setup</a></li>
                             <!--<li><a href="Tutorials_6.html">Camera Configuration</a></li>-->
@@ -123,36 +123,37 @@
         <!-- Główna zawartość strony #####################################################-->
         <main class="_Content">
 
-            <h1>Ground Texture Swapping</h1>
+            <h1>Tutorial 5: Ground Texture Swapping</h1>
             <p></p>
  <hr>
             <br>
-            <h3>Tu dowiesz się jak zmieniać teksturę obiektu <img src="Media/Main/Tails7RenderGround.png" alt="Tails7 Render Ground Icon"><code class="code _code-object">Tails7 Render Ground</code></h3>
+            <h3>Here you will learn how to change the texture of the  <img src="Media/Main/Tails7RenderGround.png" alt="Tails7 Render Ground Icon"><code class="code _code-object">Tails7 Render Ground</code> object.</h3>
             <p></p>
-            <p>Tails7 jest zaprojektowany by bardzo łatwo zmieniać teksturę.</p>
+            <p>Tails7 is designed to make it very easy to change the texture.</p>
             
-                <p>Pierwszym krokiem jest wybranie naszego <img src="Media/Main/Tails7RenderGround.png" alt="Tails7 Render Ground Icon"><code class="code _code-object">Tails7 Render Ground</code> i otwieramy okno edycji tekstur.</p>
+                <p>The first step is to select our <img src="Media/Main/Tails7RenderGround.png" alt="Tails7 Render Ground Icon"><code class="code _code-object">Tails7 Render Ground</code> and we open the texture editing window.</p>
                         <img src="Media/Tut/13/1.png"><br>
 
-                <p><br>Powinno to wyglądać tak:</p>
+                <p><br>It should look like this:</p>
 
                         <img src="Media/Tut/13/2.png" width="100%"><br>
 
-                <p><br>Wybieramy opcje do stworzenia nowej klatki animacji.</p>
+                <p><br>Choose options to create a new animation frame.</p>
 
                         <img src="Media/Tut/13/3.png" width="100%"><br>
 
                         <img src="Media/Tut/13/4.png" width="100%"><br>
                     
-                <p><br>Tu wklejam przykładową teksturę trawy. Ustawiam tu punkt <b>Hot Spot</b> by był wycentrowany gdyż jest to potrzebne.</p>
+                <p><br>Here I paste a sample grass texture. I set the <b>Hot Spot</b> here to be centered because it is needed.</p>
 
                         <img src="Media/Tut/13/5.png" width="100%"><br>
 
-                <p><br>Przechodzę do <b>Event Editor</b> i tworze takie wydarzenie która mi umożliwi zmienianie tekstury, czemu <code class="code _code-number">1</code> a nie <code class="code _code-number">2</code> dla <code class="code _code-number">_TextureID</code>? Index tekstur rozpoczyna się od <code class="code _code-number">0</code> a nie od <code class="code _code-number">1</code>.</p>
+                <p><br>I go to the <b>Event Editor</b> and create such an event that will allow me to change the texture, why <code class="code _code-number">1</code> and not <code class="code _code-number">2</code> for <code class="code _code-number">_TextureID</code>? 
+                    The texture index starts at <code class="code _code-number">0</code> and not <code class="code _code-number">1</code>.</p>
 
                         <img src="Media/Tut/13/6.png"><br>
 
-                <p><br>Po uruchomieniu projektu mam zmienioną teksturę:</p>
+                <p><br>After starting the project, I have a changed texture:</p>
 
                         <img src="Media/Tut/13/7.png" width="100%"><br>
 

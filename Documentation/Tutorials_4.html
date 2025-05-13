@@ -34,13 +34,13 @@
                     <hr/>
             
                     <!-- Instrukcje -->
-                    <li>
-                        <a href="Instructions.html">Instructions</a>
+                    <!--<li>-->
+                        <!--<a href="Instructions.html">Instructions</a>-->
                         <ul>
                             <li><a href="Instructions_1.html">What is Tails7?</a></li>
                             <li><a href="Instructions_2.html">Engine Limits and Known Issues</a></li>
                         </ul>
-                    </li>
+                    <!--</li>-->
                     <hr/>
             
                     <!-- Rozpoczęcie pracy -->
@@ -61,7 +61,7 @@
                             <li><a href="ConfigurationObjects_6.html">Tails7 Center Pointer</a></li>
                             <li><a href="ConfigurationObjects_7.html">Tails7 Background Gradient</a></li>
                             <li><a href="ConfigurationObjects_8.html">Sprite Objects</a></li>
-                            <li><a href="ConfigurationObjects_9.html">Fade Objects</a></li>
+                            <li><a href="ConfigurationObjects_9.html">Polygon Objects</a></li>
                             <li><a href="ConfigurationObjects_10.html">Line Objects</a></li>
                         </ul>
                     </li>
@@ -78,8 +78,8 @@
                         <a href="Tutorials.html">Tutorials</a>
                         <ul>
                             <li><a href="Tutorials_1.html">Object Mapping Basics</a></li>
-                            <li><a href="Tutorials_2.html">Creating Fade Effects</a></li>
-                            <li><a href="Tutorials_3.html">Working with Lines</a></li>
+                            <li><a href="Tutorials_2.html">Creating Polygon Effects</a></li>
+                            <!--<li><a href="Tutorials_3.html">Working with Lines</a></li>-->
                             <li><a href="Tutorials_4.html">Changing Game Resolution</a></li>
                             <li><a href="Tutorials_5.html">Background Objects Setup</a></li>
                             <!--<li><a href="Tutorials_6.html">Camera Configuration</a></li>-->
@@ -123,26 +123,26 @@
         <!-- Główna zawartość strony #####################################################-->
         <main class="_Content">
 
-            <h1>Tutorial 4: Changing Game Resolution</h1>
+            <h1>Tutorial 3: Changing Game Resolution</h1>
 
             <hr>
             <br>
-            <h3>Tu dowiesz się jak zmienić rozdzielczość gry</h3>
+            <h3>Here you can find out how to change the resolution of the game</h3>
             <p></p>
-            <p>Tails7 jest zaprojektowany by wspierał każdą rozdzielczość. Sama zmianna rozdzielczości jest bardzo łatwa.</p>
+            <p>Tails7 is designed to support any resolution. Changing the resolution itself is very easy.</p>
 
-            <p>Pierwszym krokiem jest wybranie naszego projektu i przechodzimy w <b>Properties</b>, tam zatem zmieniamy na rozdzielczość jaka nas najbardziej interesuje. Zmieniłem z <code class="code _code-number">1280x720</code> na <code class="code _code-number">640x480</code></p>
+            <p>The first step is to select our project and go to <b>Properties</b>, so there we change to the resolution we are most interested in. I changed from <code class="code _code-number">1280x720</code> to <code class="code _code-number">640x480</code></p>
             <img src="Media/Tut/4/1.png"><br>
             <img src="Media/Tut/4/2.png"><br>
-            <p><br>Jak widać rozdzielczość się zmieniła i wszystko jest wyświetlane prawidłowo</p>
+            <p><br>As you can see, the resolution has changed and everything is displayed correctly.</p>
             <img src="Media/Tut/4/3.png"><br>
 
             <br>
             <hr>
 
-            <p><br>Dodatkowo są zmienne <code class="code _code-number">_ResolutionX</code> i <code class="code _code-number">_ResolutionY</code> w obiekcie <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-object">Tails7 Info Object</code>. Jeśli planujesz targetować w konkretną jedną rozdzielczość to możesz podać w tych zmiennych, jednak możesz poprostu pozostawić to na <code class="code _code-number">1280x720</code>.</p>
+            <p><br>In addition, there are the variables <code class="code _code-number">_ResolutionX</code> and <code class="code _code-number">_ResolutionY</code> in the <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-object">Tails7 Info Object</code>. If you plan to target a specific one resolution then you can specify in these variables, but you can simply leave it at <code class="code _code-number">1280x720</code>.</p>
             <img src="Media/Tut/4/4.png"><br>
-            <p><br>W przypadku zbyt małej targetowej rozdzielczości, rzeczy mogą być zbyt duże na ekranie. Dlatego warto podwoić <code class="code _code-number">_ResolutionX</code> i <code class="code _code-number">_ResolutionY</code> <i>(Przykładowo: z 640x480 to na 1280x960)</i></p>
+            <p><br>If the target resolution is too small, things may be too big on the screen. That's why it's a good idea to double <code class="code _code-number">_ResolutionX</code> and <code class="code _code-number">_ResolutionY</code> <i>(Example: from 640x480 it to 1280x960).</i></p>
             <img src="Media/Tut/4/5.png"><br>
             <img src="Media/Tut/4/6.png"><br>
             <img src="Media/Tut/4/7.png"><br>

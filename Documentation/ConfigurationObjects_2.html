@@ -34,13 +34,13 @@
                     <hr/>
             
                     <!-- Instrukcje -->
-                    <li>
-                        <a href="Instructions.html">Instructions</a>
+                    <!--<li>-->
+                        <!--<a href="Instructions.html">Instructions</a>-->
                         <ul>
                             <li><a href="Instructions_1.html">What is Tails7?</a></li>
                             <li><a href="Instructions_2.html">Engine Limits and Known Issues</a></li>
                         </ul>
-                    </li>
+                    <!--</li>-->
                     <hr/>
             
                     <!-- Rozpoczęcie pracy -->
@@ -61,7 +61,7 @@
                             <li><a href="ConfigurationObjects_6.html">Tails7 Center Pointer</a></li>
                             <li><a href="ConfigurationObjects_7.html">Tails7 Background Gradient</a></li>
                             <li><a href="ConfigurationObjects_8.html">Sprite Objects</a></li>
-                            <li><a href="ConfigurationObjects_9.html">Fade Objects</a></li>
+                            <li><a href="ConfigurationObjects_9.html">Polygon Objects</a></li>
                             <li><a href="ConfigurationObjects_10.html">Line Objects</a></li>
                         </ul>
                     </li>
@@ -78,8 +78,8 @@
                         <a href="Tutorials.html">Tutorials</a>
                         <ul>
                             <li><a href="Tutorials_1.html">Object Mapping Basics</a></li>
-                            <li><a href="Tutorials_2.html">Creating Fade Effects</a></li>
-                            <li><a href="Tutorials_3.html">Working with Lines</a></li>
+                            <li><a href="Tutorials_2.html">Creating Polygon Effects</a></li>
+                            <!--<li><a href="Tutorials_3.html">Working with Lines</a></li>-->
                             <li><a href="Tutorials_4.html">Changing Game Resolution</a></li>
                             <li><a href="Tutorials_5.html">Background Objects Setup</a></li>
                             <!--<li><a href="Tutorials_6.html">Camera Configuration</a></li>-->
@@ -423,7 +423,7 @@
 
                     <div class="_ItemDec">
                         <p><b>Type:</b> Numeric parameter.</p>
-                        <p><b>Function:</b> This variable declares what width of window you are targeting.</p>
+                        <p><b>Function:</b> This variable declares what width of window you are targeting for <code class="code _code-number">X</code> axis.</p>
                         <p><b>Default value:</b> <code class="code _code-number">1280</code></p>
                     </div>
                 </div>
@@ -436,7 +436,7 @@
 
                     <div class="_ItemDec">
                         <p><b>Type:</b> Numeric parameter.</p>
-                        <p><b>Function:</b> This variable declares what height of window you are targeting.</p>
+                        <p><b>Function:</b> This variable declares what height of window you are targeting for <code class="code _code-number">Y</code> axis.</p>
                         <p><b>Default value:</b> <code class="code _code-number">720</code></p>
                     </div>
                 </div>
@@ -462,7 +462,7 @@
 
                     <div class="_ItemDec">
                         <p><b>Type:</b> Numeric parameter.</p>
-                        <p><b>Function:</b> The variable returns <code class="code _code-number">Frame Width / 2.0</code>.</p>
+                        <p><b>Function:</b> The variable returns <code class="code _code-number">Frame Width / 2.0</code>. It is designed to determine the center of the screen, used for the object <img src="/Media/Main/Tails7CenterPointer.png" alt="Tails7 Center Pointer"><code class="code _code-object">Tails7 Center Pointer</code>.</p>
                         <p><b>Default value:</b> <code class="code _code-number">0 (Automatic)</code></p>
                     </div>
                 </div>
@@ -475,7 +475,7 @@
 
                     <div class="_ItemDec">
                         <p><b>Type:</b> Numeric parameter.</p>
-                        <p><b>Function:</b> The variable returns <code class="code _code-number">Frame Height / 2.0</code>.</p>
+                        <p><b>Function:</b> The variable returns <code class="code _code-number">Frame Height / 2.0</code>. It is designed to determine the center of the screen, used for the object <img src="/Media/Main/Tails7CenterPointer.png" alt="Tails7 Center Pointer"><code class="code _code-object">Tails7 Center Pointer</code>.</p>
                         <p><b>Default value:</b> <code class="code _code-number">0 (Automatic)</code></p>
                     </div>
                 </div>
@@ -552,7 +552,7 @@
                     <div class="_ItemDec">
                         <p><b>Type:</b> String parameter.</p>
                         <p><b>Function:</b> Includes information about the current version of Tails7.</p>
-                        <p><b>Default value:</b> <code class="code _code-string">R1.0.1_10.05.25a</code></p>
+                        <p><b>Default value:</b> <code class="code _code-string">R1.0.1_13.05.25</code></p>
                     </div>
                 </div>
 
@@ -605,21 +605,115 @@
                     </div>
                 </div>
 
-
+			<br><hr><br>
                             <h2>3. Behaviors</h2>
 
             <br><hr>
 
             <!-- ************************************************************************ -->
 
-            <h2 style="padding-top: 10px">3.1. Details: Mapping Mode in <img src="Media/Main/Tails7MapperObject.png" alt="Tails7 Mapper Object Icon">Tails7 Mapper Object</h2>
+            <h2 style="padding-top: 10px">3.1. Details: Set API Render in <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon">Tails7 Info Object</h2>
             <br>
-            <p>This behavior declares how, for a given object, the computation of the position transformation into a transformed result giving the depth effect is to behave.</p>
+            <p>This behavior will automatically set the appropriate text for <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-string">_API</code> by miała odpowiedni tekst. Detects for <b>Windows</b> jwhat graphics API the program is using.</p>
+			<br>
+			
+			<h3>List of ways to set <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-string">_API</code> dependent on <code class="code _code-number">DisplayMode</code>:</h3>
+			
+			<div class="_ContentList">
+                <div class="_ListImage">
+                    <div class="_HeaderImage" style="width: 150px; min-width: 150px;">DisplayMode</div>
+                    <div class="_HeaderDec" style="flex-grow: 1; padding-right: 20px;">Description</div>
+                </div>
+				
+                <!-- 0 -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">0</code></b>
+                    </div>
 
-            <h3>List of available modes:</h3>
+                    <div class="_ItemDec">
+                        <p>
+                            Returns <code class="code _code-string">CPU</code> for <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-string">_API</code>
+                        </p>
+                    </div>
+                </div>
+				
+				<!-- 1 -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">1</code></b>
+                    </div>
 
+                    <div class="_ItemDec">
+                        <p>
+                            Returns <code class="code _code-string">DirectDraw</code> for <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-string">_API</code>
+                        </p>
+                    </div>
+                </div>
+				
+				<!-- 4 -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">4</code></b>
+                    </div>
 
+                    <div class="_ItemDec">
+                        <p>
+                            Returns <code class="code _code-string">Direct3D8</code> for <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-string">_API</code>
+                        </p>
+                    </div>
+                </div>
+				
+				<!-- 8 -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">8</code></b>
+                    </div>
 
+                    <div class="_ItemDec">
+                        <p>
+                            Returns <code class="code _code-string">Direct3D9</code> for <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-string">_API</code>
+                        </p>
+                    </div>
+                </div>
+				
+				<!-- 16 -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">16</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            Returns <code class="code _code-string">Direct3D11</code> for <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-string">_API</code>
+                        </p>
+                    </div>
+                </div>
+				
+			</div>
+			
+			<br>
+			<hr><br>
+			
+			<h2 style="padding-top: 10px">3.2. Details: Startup Set Render in <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon">Tails7 Info Object</h2>
+			<br>
+			
+			<p>This behavior is responsible for automatically creating <img src="Media/Main/Tails7RenderGround.png" alt="Tails7 Render Ground Icon"><code class="code _code-object">Tails7 Render Ground</code>
+			objects on the screen to fill the whole (Can fill the screen by width or height)</i></p>
+			<p>This behavior is activated at startup as well as by the  <code class="code _code-bool">_Active</code> flag.</p>
+			
+			<br>
+			
+			<p>This behavior additionally calculates variables such as: 
+			<code class="code _code-number">_RenderMinimumSize</code>,
+			<code class="code _code-number">_RenderMiddleSizeX</code>,
+			<code class="code _code-number">_RenderMiddleSizeY</code>,
+			<code class="code _code-number">_ScaleFactorX</code>,
+			<code class="code _code-number">_ScaleFactorY</code>,
+			<code class="code _code-number">_WidthRatio</code>,
+			<code class="code _code-number">_AspectCorrection</code> and
+			<code class="code _code-bool">_IsUpdating</code>.
+            </p>
         </main>
       </div>
     </body>

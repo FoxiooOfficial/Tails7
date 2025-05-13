@@ -34,13 +34,13 @@
                     <hr/>
             
                     <!-- Instrukcje -->
-                    <li>
-                        <a href="Instructions.html">Instructions</a>
+                    <!--<li>-->
+                        <!--<a href="Instructions.html">Instructions</a>-->
                         <ul>
                             <li><a href="Instructions_1.html">What is Tails7?</a></li>
                             <li><a href="Instructions_2.html">Engine Limits and Known Issues</a></li>
                         </ul>
-                    </li>
+                    <!--</li>-->
                     <hr/>
             
                     <!-- Rozpoczęcie pracy -->
@@ -61,7 +61,7 @@
                             <li><a href="ConfigurationObjects_6.html">Tails7 Center Pointer</a></li>
                             <li><a href="ConfigurationObjects_7.html">Tails7 Background Gradient</a></li>
                             <li><a href="ConfigurationObjects_8.html">Sprite Objects</a></li>
-                            <li><a href="ConfigurationObjects_9.html">Fade Objects</a></li>
+                            <li><a href="ConfigurationObjects_9.html">Polygon Objects</a></li>
                             <li><a href="ConfigurationObjects_10.html">Line Objects</a></li>
                         </ul>
                     </li>
@@ -78,8 +78,8 @@
                         <a href="Tutorials.html">Tutorials</a>
                         <ul>
                             <li><a href="Tutorials_1.html">Object Mapping Basics</a></li>
-                            <li><a href="Tutorials_2.html">Creating Fade Effects</a></li>
-                            <li><a href="Tutorials_3.html">Working with Lines</a></li>
+                            <li><a href="Tutorials_2.html">Creating Polygon Effects</a></li>
+                            <!--<li><a href="Tutorials_3.html">Working with Lines</a></li>-->
                             <li><a href="Tutorials_4.html">Changing Game Resolution</a></li>
                             <li><a href="Tutorials_5.html">Background Objects Setup</a></li>
                             <!--<li><a href="Tutorials_6.html">Camera Configuration</a></li>-->
@@ -138,6 +138,8 @@
 
             <h3 style="padding-top: 10px">ℹ️ This object has the same variables as the mapped objects because it itself belongs to <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon">Group.3D Objects.</h3>
             <p>For this object, I do not recommend changing the values of the variables!</p>
+
+            <p>For a list of variables, see <a href="ConfigurationObjects_8.html">Here</a>.</p>
 
             <br><hr><br>
         
@@ -637,6 +639,22 @@
                     </div>
                 </div>
 
+                <!-- TOCAMERAZ -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">TOCAMERAZ</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            <b>
+                               Similar to <code class="code _code-string">TOCAMERA</code> mode but it also depends on the Z position.
+                            </b>
+                        </p>
+                    </div>
+                </div>
+
+
                 <!-- STATIC -->
                 <div class="_ListItem">
                     <div class="_ItemCode" style="width: 150px; min-width: 150px;">
@@ -662,6 +680,21 @@
                         <p>
                             <b>
                                 This mode sets layer ordering based on the position of the <img src="Media/Main/PlayerHitbox.png" alt="Player Hitbox Icon"><code class="code _code-object">Player Hitbox</code>. Objects closer to the player hitbox will be <b>FRONT</b> those that are further away and will be <b>BEHIND</b>. These calculations are stored in <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_LayerDistance</code>, and the viewing angles in <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_AngleVisiblity</code> and <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-number">_AngularVisibility</code>.
+                            </b>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- TOLAYERZ -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-string">TOLAYERZ</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p>
+                            <b>
+                               Similar to <code class="code _code-string">TOLAYER</code> mode but it also depends on the Z position.
                             </b>
                         </p>
                     </div>

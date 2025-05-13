@@ -34,13 +34,13 @@
                     <hr/>
             
                     <!-- Instrukcje -->
-                    <li>
-                        <a href="Instructions.html">Instructions</a>
+                    <!--<li>-->
+                        <!--<a href="Instructions.html">Instructions</a>-->
                         <ul>
                             <li><a href="Instructions_1.html">What is Tails7?</a></li>
                             <li><a href="Instructions_2.html">Engine Limits and Known Issues</a></li>
                         </ul>
-                    </li>
+                    <!--</li>-->
                     <hr/>
             
                     <!-- Rozpoczęcie pracy -->
@@ -61,7 +61,7 @@
                             <li><a href="ConfigurationObjects_6.html">Tails7 Center Pointer</a></li>
                             <li><a href="ConfigurationObjects_7.html">Tails7 Background Gradient</a></li>
                             <li><a href="ConfigurationObjects_8.html">Sprite Objects</a></li>
-                            <li><a href="ConfigurationObjects_9.html">Fade Objects</a></li>
+                            <li><a href="ConfigurationObjects_9.html">Polygon Objects</a></li>
                             <li><a href="ConfigurationObjects_10.html">Line Objects</a></li>
                         </ul>
                     </li>
@@ -78,8 +78,8 @@
                         <a href="Tutorials.html">Tutorials</a>
                         <ul>
                             <li><a href="Tutorials_1.html">Object Mapping Basics</a></li>
-                            <li><a href="Tutorials_2.html">Creating Fade Effects</a></li>
-                            <li><a href="Tutorials_3.html">Working with Lines</a></li>
+                            <li><a href="Tutorials_2.html">Creating Polygon Effects</a></li>
+                            <!--<li><a href="Tutorials_3.html">Working with Lines</a></li>-->
                             <li><a href="Tutorials_4.html">Changing Game Resolution</a></li>
                             <li><a href="Tutorials_5.html">Background Objects Setup</a></li>
                             <!--<li><a href="Tutorials_6.html">Camera Configuration</a></li>-->
@@ -128,72 +128,72 @@
 
         <hr>
         <br>
-        <h3>Tu dowiesz się o jak ustawiach sprite na ekranie</h3>
+        <h3>Here you will learn how to set sprites on the screen</h3>
         <p></p>
-        <p>Początkowo otwórz Tails7.mfa i przejdź do frame <code class="code _code-keyword">Room#0000</code></p>
+        <p>First open Tails7.mfa and go to frame <code class="code _code-keyword">Room#0000</code></p>
 
         <img src="Media/Tut/1/p1.png"/><br>
 
         <p></p>
-        <p>Następnie uruchamiamy projekt sprawdzając czy działa.</p>
+        <p>Then we run the project and check if it works.</p>
         
         <img src="Media/Tut/1/p2.png"/><br>
 
         <p></p>
-        <p>Powinieneś mieć taki widok:</p>        
+        <p>You should have a view like this:</p>        
 
         <img src="Media/Tut/1/p3.png" width="70%"><br>
 
-        <p>Używaj klawiszy <code class="code _code-keyword">W A S D</code> do poruszania się w osi <code class="code _code-number">X</code> i <code class="code _code-number">Y</code>.<br>
-        Używaj klawiszy <code class="code _code-keyword">Spacja i Ctrl</code> do poruszania się w osi <code class="code _code-number">X</code>.<br>
-        Używaj klawiszy <code class="code _code-keyword">Strzałka w lewo i Strzałka w prawo</code> do obraca kamerew osi <code class="code _code-number">X</code><br>
-        Używaj klawiszy <code class="code _code-keyword">Strzałka w góre i Strzałka w dół</code> do obraca kamerew osi <code class="code _code-number">Z</code>.<br>
-                Używaj klawiszy <code class="code _code-keyword">Q E</code> do zmiany zakrzywienia.</p>
+        <p>Use the <code class="code _code-keyword">W A S D</code> keys to move in the <code class="code _code-number">X</code> and <code class="code _code-number">Y</code> axis.<br>
+        Use the <code class="code _code-keyword">Space and Ctrl</code> keys to move in the <code class="code _code-number">Z</code> axis.<br>
+        Use the <code class="code _code-keyword">Left and Right arrow</code> keys to rotate the camera in the <code class="code _code-number">X</code> axis.<br>
+        Use the <code class="code _code-keyword">Up and Down arrow</code> keys to rotate the camera in the <code class="code _code-number">Z</code> axis.<br>
+        Use the <code class="code _code-keyword">Q E</code> to change the perspective.</p>
 
         <hr>
 
-        <p><br>Okej, teraz skupmy się by stworzyć nowy obiekt który będziemy modyfikować.</p>
+        <p><br>Okay, now let's focus on creating a new object that we will modify.</p>
 
-        <p>Zatem upewniam się że jest wybrana prawidłowa wartstwa. <b>(Warstwa 3 jest ogólnie przeznaczona do obiektów sprite, fade i linii, jednak możesz zmienić to na swoje potrzeby)</b></p>
+        <p>So I make sure the correct layer is selected. <b>(Layer 3 is generally for sprite, fade and line objects, however you can change it to suit your needs)</b></p>
 
         <img src="Media/Tut/1/p4.png"/><br>
 
-        <p><br>Wybieram obiekt <code class="code _code-object">(Sprite) Orange Fox</code> i go klonuje, powinen się stworzyć <code class="code _code-object">(Sprite) Orange Fox 2</code></p>
+        <p><br>I select the object <code class="code _code-object">(Sprite) Orange Fox</code> and clone it, it should create <code class="code _code-object">(Sprite) Orange Fox 2</code></p>
 
         <img src="Media/Tut/1/p5.png"/><br>
 
         <img src="Media/Tut/1/p6.png"/><br>
 
-        <p><br>Obiekt się stworzył jednak jest <b>POD</b> obiektem <code class="code _code-object">(Sprite) Green Wolf</code> więc ten obiekt przesuwam na sam dół warstw.</p>
+        <p><br>The object was created, but it is <b>UNDER</b> the <code class="code _code-object">(Sprite) Green Wolf</code> object, so I move this object to the very bottom of the layers.</p>
 
         <img src="Media/Tut/1/p7.png"/><br>
 
-        <p><br>Przesuwam obiekt i <b>✨TA DA!✨</b> mamy własny obiekt. Jednak zanim uruchomisz projekt trzeba go wyróżnić by wiedzieć że on faktycznie jest po uruchomieniu.</p>
+        <p><br>I move the object and <b>✨TA DA!✨</b> we have our own object. However, before you run the project, you need to highlight it to know that it is actually after the run.</p>
 
         <img src="Media/Tut/1/p8.png"/><br>
 
-        <p><br>Zmieniam nazwę obiekut <code class="code _code-object">(Sprite) Orange Fox 2</code> na <code class="code _code-object">(Sprite) My Object</code>.<br>
-        Właczam flagę <code class="code _code-bool">Auto-update</code> by ikona się zaaktulizowała sama po zmianie tekstury.</p>
+        <p><br>I changed the name of the object <code class="code _code-object">(Sprite) Orange Fox 2</code> to <code class="code _code-object">(Sprite) My Object</code>.<br>
+        I turn on the <code class="code _code-bool">Auto-update</code> flag so that the icon updates itself after changing the texture.</p>
 
         <img src="Media/Tut/1/p9.png"/><br>
 
-        <p><br>Zmieniam teksturę na domyślny diament i upewniam się punkt <b>Hot Spot</b> na sam dół tekstury wycentrowany.</p>
+        <p><br>I change the texture to the default diamond and make sure the <b>Hot Spot</b> at the bottom of the texture is centered..</p>
 
         <img src="Media/Tut/1/p10.png" width="70%"><br>
 
         <img src="Media/Tut/1/p11.png"/><br>
 
-        <p><br>Ostatnim krokiem zmieniam wartości <code class="code _code-number">_PositionX</code> i <code class="code _code-number">_PositionY</code> na <code class="code _code-number">512.0</code>.</p>
+        <p><br>In the last step I change the <code class="code _code-number">_PositionX</code> and <code class="code _code-number">_PositionY</code> values ​​to <code class="code _code-number">512.0</code>.</p>
 
         <img src="Media/Tut/1/p12.png"/><br>
 
         <img src="Media/Tut/1/p13.png"/><br>
 
-        <p><br><b>Uruchamiam projekt i nasz obiekt się wyświetla!</b></p>
+        <p><br><b>I run the project and our object is displayed!</b></p>
 
         <img src="Media/Tut/1/p14.png" width="70%"><br>
 
-        <p><br>W event editor tworze proste wydarzenia by na bierząco zmeniał pozycję tych wartości by dawał efekt okręgu.</p>
+        <p><br>In the <b>Event Editor</b> I create simple events to always change the position of these values ​​to give a circle effect.</p>
 
         <img src="Media/Tut/1/p15.png"/><br>
 
@@ -204,25 +204,27 @@
                 Your browser does not support the video tag.
         </video> 
 
-        <p><br><b>Deaktywuje te wydarzenia gdyż przechodzimy do kolejnego punktu.</b></p>
+        <p><br><b>Deactivates these events as we move on to the next topic.</b></p>
 
         <img src="Media/Tut/1/p17.png"/><br>
 
         <br><hr><br>
 
-        <p>Skupiamy się teraz na zmiennych <code class="code _code-number">_OffsetX</code> i <code class="code _code-number">_OffsetY</code>. <code class="code _code-number">_OffsetX</code> ma mniej zastosowania gdyż przesuwa obiekt na ekranie w osi <code class="code _code-number">X</code> jednak <code class="code _code-number">_OffsetY</code> jest bardziej skuteczny gdyż jako że przesuwa obiekt na ekranie <code class="code _code-number">Y</code> to powoduje iluzje głębi.</p>
+        <p>We now focus on the <code class="code _code-number">_OffsetX</code> and <code class="code _code-number">_OffsetY</code> variables. <code class="code _code-number">_OffsetX</code> 
+            has less use since it moves the object on the screen in the <code class="code _code-number">X</code> axis, however <code class="code _code-number">_OffsetY</code> 
+            is more effective since since it moves the object on the screen <code class="code _code-number">Y</code> it creates the illusion of depth.</p>
 
         <img src="Media/Tut/1/p18.png"/><br>
 
-        <p><br>Ustawiam wartość <code class="code _code-number">_OffsetY</code> na <code class="code _code-number">-256.0</code> co spowoduje przesunięcie do góry.</p>
+        <p><br>I set the <code class="code _code-number">_OffsetY</code> value to <code class="code _code-number">-256.0</code> which will shift it up.</p>
 
         <img src="Media/Tut/1/p19.png"/><br>
 
-        <p><br>Jak widzimy, obiekt jest w powietrzu.</p>
+        <p><br>As we can see, the object is in the air.</p>
 
         <img src="Media/Tut/1/p20.png" width="70%"/><br>
 
-        <p><br>W event editor tworze prostę wydarzenie które powoduje że obiekt będzie się odbijał w nieskończoność od podłogi.</p>
+        <p><br>In the event editor I create a simple event that causes an object to bounce endlessly off the floor.</p>
 
         <img src="Media/Tut/1/p21.png"/><br>
 
@@ -231,7 +233,7 @@
                 Your browser does not support the video tag.
         </video>
 
-        <p><br>Deaktywuje to wydarzenie bo teraz skupiemy się na kolejnym punkcie</p>
+        <p><br>I will deactivate this event as we now focus on the next topic.</p>
 
         <img src="Media/Tut/1/p22.png"/><br>
 
@@ -239,46 +241,48 @@
         <hr>
         <br>
 
-        <p>Teraz zajmiejmy się zmiennymi <code class="code _code-number">_Scale</code>, <code class="code _code-number">_ScaleX</code> i <code class="code _code-number">_ScaleY</code>. Zmienne te zmieniają skale obiektu.</p>
+        <p>Now let's look at the variables <code class="code _code-number">_Scale</code>, <code class="code _code-number">_ScaleX</code> and <code class="code _code-number">_ScaleY</code>. 
+            hese variables change the scales of the object.</p>
 
         <img src="Media/Tut/1/p23.png"/><br>
 
-        <p><br>Zmieniam wartość <code class="code _code-number">_Scale</code> z <code class="code _code-number">5.0</code> na <code class="code _code-number">25.0</code> co powoduje że obiekt będzie większy.</p>
+        <p><br>I change the <code class="code _code-number">_Scale</code> value from <code class="code _code-number">5.0</code> to <code class="code _code-number">25.0</code> 
+            which makes the object larger.</p>
 
         <img src="Media/Tut/1/p24.png"/><br>
 
-        <p><br>Jak widzimy obiekt jest większy.</p>
+        <p><br>As we can see, the object is larger.</p>
 
         <img src="Media/Tut/1/p25.png" width="70%"/><br>
 
-        <p><br>Dodatkowo zmieniam wartość <code class="code _code-number">_ScaleX</code> z <code class="code _code-number">1.0</code> na <code class="code _code-number">3.0</code> co spowoduje że obiekt będzie szerszy.</p>
+        <p><br>Additionally, I change the <code class="code _code-number">_ScaleX</code> value from <code class="code _code-number">1.0</code> to <code class="code _code-number">3.0</code>, which will make the object wider.</p>
 
         <img src="Media/Tut/1/p26.png"/><br>
 
         <img src="Media/Tut/1/p27.png" width="70%"/><br>
 
-        <p><br>Jednak gdy zmieniam wartość <code class="code _code-number">_ScaleY</code> z <code class="code _code-number">1.0</code> na <code class="code _code-number">3.0</code> to spowoduje że obiekt będzie wyższy.</p>
+        <p><br>However, when I change the <code class="code _code-number">_ScaleY</code> value from <code class="code _code-number">1.0</code> to <code class="code _code-number">3.0</code>it will make the object taller.</p>
 
         <img src="Media/Tut/1/p28.png"/><br>
 
         <img src="Media/Tut/1/p29.png" width="70%"/><br>
 
-        <p><br>Zmieniam wartości na takie jak były poprzednio.</p>
+        <p><br>I change the values ​​to what they were before.</p>
 
         <img src="Media/Tut/1/p30.png"/><br>
 
-        <p><br>W event editor tworze wydarzenie które zmienia dynamicznie ogólną skale obiektu co daje efekt pulsowania.</p>
+        <p><br>In the <b>Event Editor</b> I create an event that dynamically changes the overall scale of the object, which gives a pulsating effect.</p>
 
         <img src="Media/Tut/1/p31.png"/><br>
 
-        <p><br>I jak widzimy, tak wygląda rezultat:</p>
+        <p><br>And as we can see, this is what the result looks like:</p>
 
         <video width="70%" height="70%" controls>
             <source src="Media/Tut/1/v3.mkv" type="video/mp4">
                 Your browser does not support the video tag.
         </video>
 
-        <p><br>Możesz zmienić punkt <b>Hot Spot</b> by był wycentrowany dla zmiany skali by pulsował do środka.</p>
+        <p><br>You can change the <b>Hot Spot</b> to be centered to change the scale so it pulsates inward.</p>
 
         <img src="Media/Tut/1/p32.png" width="70%"/><br>
 
@@ -287,7 +291,7 @@
                 Your browser does not support the video tag.
         </video>
 
-        <p><br>Tworze wydarzenie które osobno dla <code class="code _code-number">_ScaleX</code> i <code class="code _code-number">_ScaleY</code> zmienia wartości jak podałem poniżej:</p>
+        <p><br>I create an event that changes the values ​​separately for <code class="code _code-number">_ScaleX</code> and <code class="code _code-number">_ScaleY</code> as given below:</p>
 
         <img src="Media/Tut/1/p34.png"/><br>
 
@@ -296,17 +300,18 @@
                 Your browser does not support the video tag.
         </video><br>
 
-        <p><br>Deaktywuje te wydarzenia gdyż teraz zajmiejmy się nastepną zmienną.</p>
+        <p><br>I will deactivate these events as we move on to the next topic.</p>
 
         <br>
         <hr>
         <br>
 
-        <p><br>Teraz zajmiejmy się zmienną <code class="code _code-number">_LayerOffset</code>. Może zmieniać pozycję warstwy dla obiektu. Aby zademonstrować co mam na myśli, tworze 2 kolejne kopie obiektu. Nazwyam je <code class="code _code-number">(Sprite) My Object Red</code> i <code class="code _code-number">(Sprite) My Object Yellow</code>.</p>
+        <p><br>Now let's take a look at the <code class="code _code-number">_LayerOffset</code>. variable. It can change the layer position for the object. To demonstrate what I mean, I create 2 more copies of the object. I'll call them
+             <code class="code _code-number">(Sprite) My Object Red</code> and <code class="code _code-number">(Sprite) My Object Yellow</code>.</p>
 
         <img src="Media/Tut/1/p35.png"/><br>
 
-        <p><br>Dla nastepujących obiektów zmieniam wartości tak jak podałem poniżej: </p>
+        <p><br>For the following objects I change the values ​​as given below: </p>
 
         <img src="Media/Tut/1/p36.png"/><br>
 
@@ -314,54 +319,54 @@
 
         <img src="Media/Tut/1/p38.png"/><br>
 
-        <p><br>Tworze następujące wydarzenia w Event Editor które ustawia pozycję gracza na podane kordynaty i gdy nacisne dany przycisk, zmieni wartość <code class="code _code-number">_OffsetLayer</code> osobno dla danego obiektu.</p>
+        <p><br>I create the following events in the <b>Event Editor</b> which sets the player's position to the given coordinates and when a given button is pressed, it changes the <code class="code _code-number">_OffsetLayer</code> ovalue separately for a given object.</p>
 
         <img src="Media/Tut/1/p39.png"/><br>
 
-        <p><br>To się stanie gdy nacisne przycisk <code class="code _code-keyword">Z</code>. Obiekt <code class="code _code-number">(Sprite) My Object Yellow</code> się wyświetla <b>NAD</b> wszystkimi tymi obiektami.</p>
+        <p><br>This will happen when I press the <code class="code _code-keyword">Z</code> button. The <code class="code _code-number">(Sprite) My Object Yellow</code> is displayed <b>OVER</b> all of these objects.</p>
 
         <img src="Media/Tut/1/p40.png" width="70%"/><br>
 
-                <p><br>To się stanie gdy nacisne przycisk <code class="code _code-keyword">X</code>. Wszystkie obiekty się warstwóją domyślnie.</p>
+                <p><br>This will happen when I press the <code class="code _code-keyword">X</code> button. All objects are layered by default.</p>
 
         <img src="Media/Tut/1/p41.png" width="70%"/><br>
 
-                <p><br>To się stanie gdy nacisne przycisk <code class="code _code-keyword">C</code>. Obiekt <code class="code _code-number">(Sprite) My Object Red</code> się wyświetla <b>POD</b> wszystkimi tymi obiektami.</p>
+                <p><br>This will happen when I press the <code class="code _code-keyword">C</code> button. The <code class="code _code-number">(Sprite) My Object Red</code> prite displays <b>UNDER</b> all these objects.</p>
 
         <img src="Media/Tut/1/p42.png" width="70%"/><br>
 
-        <p><br>Deaktywuje to wydarzenie gdyż zajmiejmy się teraz funkcjonalnością tworzenia obiektów automatycznie.</p>
+        <p><br>Deactivates this event as we now move on to the topic that will allow us to create objects automatically.</p>
 
         <br>
         <hr>
         <br>
 
-        <p><br>Planuje by dla danego nowego obiektu którego utworzyłem czyli <code class="code _code-object">Creator</code> automatycznie tworzyło obiekt <code class="code _code-object">(Sprite) My Object</code> i ustawiał jego pozycje w przestrzeni.</p>
+        <p><br>I plan that for a given new object that I created, i.e. <code class="code _code-object">Creator</code> it would automatically create an object <code class="code _code-object">(Sprite) My Object</code> and set its position in space.</p>
 
         <img src="Media/Tut/1/p43.png"/><br>
 
-        <p><br>Tworze kilka tych obiektów na <b>Warstwie 4</b>, również dla tego obiektu wyłaczam widoczność na starcie.</p>
+        <p><br>I create several of these objects on <b>Warstwie 4</b>, and for this object I also turn off visibility at the start.</p>
 
         <img src="Media/Tut/1/p44.png"/><br>
 
         <img src="Media/Tut/1/p46.png"/><br>
 
-        <p><br>Dla obiektów <code class="code _code-object">(Sprite) My Object Red</code>, <code class="code _code-object">(Sprite) My Object</code> i <code class="code _code-object">(Sprite) My Object Yellow</code> wyłaczam tworzenie na starcie.</p>
+        <p><br>For objects <code class="code _code-object">(Sprite) My Object Red</code>, <code class="code _code-object">(Sprite) My Object</code> and <code class="code _code-object">(Sprite) My Object Yellow</code> I disable creation at the start.</p>
 
         <img src="Media/Tut/1/p45.png"/><br>
 
-        <p><br>Przygotywuje w <b>Event Editor</b> prosty skrypt by dla każdego obiektu <code class="code _code-object">Creator</code> utworzył <code class="code _code-object">(Sprite) My Object</code>.</p>
+        <p><br>Prepares a simple event in the <b>Event Editor</b>to create <code class="code _code-object">(Sprite) My Object</code> for each <code class="code _code-object">Creator</code>.</p>
 
         <img src="Media/Tut/1/p47.png"/><br>
 
-        <p><br>Tak prezentuje się tworzenie obiektów:</p>
+        <p><br>This is what creating objects looks like:</p>
 
         <video width="70%" height="70%" controls>
             <source src="Media/Tut/1/v6.mkv" type="video/mp4">
                 Your browser does not support the video tag.
         </video><br>
         
-        <p><br>Dla niepotrzebnym nam obiektom w frame, wyłaczam ich możliwość tworzenia na starcie by były tylko utworzone <code class="code _code-object">(Sprite) My Object</code>.</p>
+        <p><br>For unnecessary objects in the frame, I disable their creation at the start so that they are only created <code class="code _code-object">(Sprite) My Object</code>.</p>
 
         <img src="Media/Tut/1/p48.png"/><br>
 
@@ -370,7 +375,7 @@
         <br>
         <hr>
 
-        <h2><br>Zrobiłem mały przykład przy użyciu kilka tych zmiennych i tak to wygląda:</h2>
+        <h2><br>I made a little example using a few of these variables and this is what it looks like:</h2>
         <br>
 
         <img src="Media/Tut/1/p50.png"/><br>

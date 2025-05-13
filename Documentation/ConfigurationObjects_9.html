@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Fade Objects</title>
+        <title>Polygon Objects</title>
         <link rel="icon" href="Media/Main/Icon16.png" type="image/x-icon" />
         <link rel="stylesheet" href="CSS/Style.css" />
 
@@ -34,13 +34,13 @@
                     <hr/>
             
                     <!-- Instrukcje -->
-                    <li>
-                        <a href="Instructions.html">Instructions</a>
+                    <!--<li>-->
+                        <!--<a href="Instructions.html">Instructions</a>-->
                         <ul>
                             <li><a href="Instructions_1.html">What is Tails7?</a></li>
                             <li><a href="Instructions_2.html">Engine Limits and Known Issues</a></li>
                         </ul>
-                    </li>
+                    <!--</li>-->
                     <hr/>
             
                     <!-- Rozpoczęcie pracy -->
@@ -61,7 +61,7 @@
                             <li><a href="ConfigurationObjects_6.html">Tails7 Center Pointer</a></li>
                             <li><a href="ConfigurationObjects_7.html">Tails7 Background Gradient</a></li>
                             <li><a href="ConfigurationObjects_8.html">Sprite Objects</a></li>
-                            <li><a href="ConfigurationObjects_9.html">Fade Objects</a></li>
+                            <li><a href="ConfigurationObjects_9.html">Polygon Objects</a></li>
                             <li><a href="ConfigurationObjects_10.html">Line Objects</a></li>
                         </ul>
                     </li>
@@ -78,8 +78,8 @@
                         <a href="Tutorials.html">Tutorials</a>
                         <ul>
                             <li><a href="Tutorials_1.html">Object Mapping Basics</a></li>
-                            <li><a href="Tutorials_2.html">Creating Fade Effects</a></li>
-                            <li><a href="Tutorials_3.html">Working with Lines</a></li>
+                            <li><a href="Tutorials_2.html">Creating Polygon Effects</a></li>
+                            <!--<li><a href="Tutorials_3.html">Working with Lines</a></li>-->
                             <li><a href="Tutorials_4.html">Changing Game Resolution</a></li>
                             <li><a href="Tutorials_5.html">Background Objects Setup</a></li>
                             <!--<li><a href="Tutorials_6.html">Camera Configuration</a></li>-->
@@ -123,31 +123,364 @@
         <!-- Główna zawartość strony #####################################################-->
         <main class="_Content">
 
-            <h1><img src="Media/Main/FadeLonelyObjects.png" alt="Fade Lonely Objects Icon"><img src="Media/Main/FadeRequiringObjects.png" alt="Fade Requiring Objects Icon"> Fade Objects</h1>
+            <h1><img src="Media/Main/PolygonLonelyObjects.png" alt="Fade Lonely Objects Icon"><img src="Media/Main/PolygonRequiringObjects.png" alt="Fade Requiring Objects Icon"> Polygon Objects</h1>
+
+            <hr><br>
+            <h2>1. General Description of Object</h2>
+        
+            <p style="padding-top: 10px;">
+               Polygon objects are those objects that have Quad Shader applied and from 4 points draw like a polygon. <i>(These objects before were mistakenly called as "Fade" so in other examples .MFA may be called that)</i>.
+            </p>
             <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum minus officia reiciendis accusantium suscipit distinctio, tempora deserunt provident, nobis voluptatum illo soluta eos. Obcaecati quia inventore dolore omnis maiores at?
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, odio!</p>
-            <p>Inventore soluta sit accusamus nihil assumenda nemo quam illum ad.</p>
-            <p>Nemo nihil ex sequi consequatur quam? Excepturi eum totam optio?</p>
-            <p>Minus eum fugiat porro praesentium ipsum? Suscipit perspiciatis laborum impedit.</p>
-            <p>Eveniet assumenda omnis repellendus consequuntur laborum quae? Libero, ullam dolorum.</p>
-            <p>Quod similique aspernatur quo sed dolore quaerat corrupti fugit natus!</p>
-            <p>Aperiam saepe animi aliquam, explicabo expedita totam velit temporibus nam!</p>
-            <p>Tempora doloribus, quaerat ullam repellat nihil accusamus atque debitis ipsam!</p>
-            <p>Laborum consequatur non possimus excepturi recusandae autem delectus voluptas rem.</p>
-            <p>Cum ut ea, ad expedita officiis assumenda est facilis veritatis!</p>
-            <p>Eaque deleniti ipsum delectus tempora modi culpa aliquam molestiae eligendi?</p>
-            <p>Minima, sint vero voluptatem est culpa omnis impedit dolores maxime?</p>
-            <p>Reprehenderit facilis suscipit facere temporibus perferendis vero illum, inventore officia?</p>
-            <p>Quam rerum quibusdam iure eius culpa excepturi unde commodi sequi!</p>
-            <p>Doloremque veritatis corporis, quibusdam saepe illo cupiditate recusandae nulla nisi?</p>
-            <p>Quo vero nemo tempora odit, iusto iure perferendis veritatis voluptate!</p>
-            <p>Totam sed cumque similique eius temporibus optio rem, voluptatibus obcaecati.</p>
-            <p>Sit voluptates quas quia, amet nemo id voluptatibus quos nihil!</p>
-            <p>Unde ratione dignissimos rerum? Vel tempore dolore laboriosam maxime deleniti?</p>
-            <p>Molestiae dolorem sunt quisquam incidunt qui ratione voluptate laboriosam. Ipsam.</p>
+                Currently, at the time of writing this documentation, there is one type of this object, it is the <img src="Media/Main/PolygonRequiringObjects.png" alt="Fade Requiring Objects Icon"><code class="code _code-object">Polygon Requiring Object</code>. 
+                This object requires that of the 4 <img src="Media/Main/Group.3DObjects.png" alt="Group.3D Objects Icon"><code class="code _code-object">Group.3D Objects</code> on the screen <i>(Or any other object)</i>, be used as points for the shader.
             </p>
 
+            <img src="Media/Main/PolygonRequiringObjectsBanner.png">
+
+            <p><b><br>
+                It is important to set the points properly so that the shader draws the polygon well.
+            </p></b>
+
+            <br>
+            
+            <p>
+                The second type is <img src="Media/Main/PolygonLonelyObjects.png" alt="Fade Lonely Objects Icon"><code class="code _code-object">Polygon Lonelty Object</code><b>(This type is to be introduced in the future)</b>.
+            </p>
+
+            <p>
+                The difference of this type from <img src="Media/Main/PolygonRequiringObjects.png" alt="Fade Requiring Objects Icon"><code class="code _code-object">Polygon Requiring Object</code> is that it calculates the points on the screen by itself and can work without additional objects.
+            </p>
+
+			<hr><br>
+
+            <h2>2. Variables</h2>
+
+            <div class="_ContentList">
+                <div class="_ListImage">
+                    <div class="_HeaderImage" style="width: 150px; min-width: 150px;">Alterable Values</div>
+                    <div class="_HeaderDec" style="flex-grow: 1; padding-right: 20px;">Description</div>
+                </div>
+                
+                <!-- XA -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_PointX_A</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+
+                        <p><b>Function:</b>  <p><b>Function:</b> Variable used to set the point to the <b>upper left</b> corner of the shader polygon for the <code class="code _code-number">X</code> axis
+                        <i>(Automatically calculated by <img src="Media/Main/PolygonRequiringObjects.png" alt="Fade Requiring Objects Icon"><code class="code _code-keyword">Set Points and Other Varibles</code> behavior)</i>.</p></p>
+
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- YA -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_PointY_A</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b>  <p><b>Function:</b> Variable used to set the point to the <b>upper left</b> corner of the shader polygon for the <code class="code _code-number">Y</code> axis
+                        <i>(Automatically calculated by <img src="Media/Main/PolygonRequiringObjects.png" alt="Fade Requiring Objects Icon"><code class="code _code-keyword">Set Points and Other Varibles</code> behavior)</i>.</p></p>
+
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                                <!-- XB -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_PointX_B</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+
+                        <p><b>Function:</b>  <p><b>Function:</b> Variable used to set the point to the <b>upper right</b> corner of the shader polygon for the <code class="code _code-number">X</code> axis
+                        <i>(Automatically calculated by <img src="Media/Main/PolygonRequiringObjects.png" alt="Fade Requiring Objects Icon"><code class="code _code-keyword">Set Points and Other Varibles</code> behavior)</i>.</p></p>
+
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- YB -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_PointY_B</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+
+                        <p><b>Function:</b>  <p><b>Function:</b> Variable used to set the point to the <b>upper right</b> corner of the shader polygon for the <code class="code _code-number">Y</code> axis
+                        <i>(Automatically calculated by <img src="Media/Main/PolygonRequiringObjects.png" alt="Fade Requiring Objects Icon"><code class="code _code-keyword">Set Points and Other Varibles</code> behavior)</i>.</p></p>
+
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                                <!-- XC -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_PointX_C</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+
+                        <p><b>Function:</b>  <p><b>Function:</b> Variable used to set the point to the <b>lower right</b> corner of the shader polygon for the <code class="code _code-number">X</code> axis
+                        <i>(Automatically calculated by <img src="Media/Main/PolygonRequiringObjects.png" alt="Fade Requiring Objects Icon"><code class="code _code-keyword">Set Points and Other Varibles</code> behavior)</i>.</p></p>
+
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- YC -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_PointY_C</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+
+                        <p><b>Function:</b>  <p><b>Function:</b> Variable used to set the point to the <b>lower right</b> corner of the shader polygon for the <code class="code _code-number">Y</code> axis
+                        <i>(Automatically calculated by <img src="Media/Main/PolygonRequiringObjects.png" alt="Fade Requiring Objects Icon"><code class="code _code-keyword">Set Points and Other Varibles</code> behavior)</i>.</p></p>
+
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                                <!-- XD -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_PointX_D</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+
+                        <p><b>Function:</b>  <p><b>Function:</b> Variable used to set the point to the <b>lower left</b> corner of the shader polygon for the <code class="code _code-number">X</code> axis
+                        <i>(Automatically calculated by <img src="Media/Main/PolygonRequiringObjects.png" alt="Fade Requiring Objects Icon"><code class="code _code-keyword">Set Points and Other Varibles</code> behavior)</i>.</p></p>
+
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- YD -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_PointY_D</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+
+                        <p><b>Function:</b>  <p><b>Function:</b> Variable used to set the point to the <b>lower left</b> corner of the shader polygon for the <code class="code _code-number">Y</code> axis
+                        <i>(Automatically calculated by <img src="Media/Main/PolygonRequiringObjects.png" alt="Fade Requiring Objects Icon"><code class="code _code-keyword">Set Points and Other Varibles</code> behavior)</i>.</p></p>
+
+                        <p><b>Default value:</b> <code class="code _code-number">0.0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _LayerOffset -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_LayerOffset</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable specifies the layer offset: negative values allow the object to render <b>behind</b> objects behind it, and positive values allow it to render <b>above</b> objects in front of it.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0.0</code></p>
+                    </div>
+                </div>
+
+                <!-- _Layer -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_Layer</code></b>
+                    </div>
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> This variable is automatically calculated by the <img src="Media/Main/PolygonRequiringObjects.png" alt="Fade Requiring Objects Icon"><code class="code _code-keyword">Set Points and Other Varibles</code> behavior; it determines the current layer of the object for the <img src="Media/Main/LayerObject.png" alt="Layer Object Icon"><code class="code _code-keyword">Layer Object</code>.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">0 (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _FixValue -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-number">_FixValue</code></b>
+                    </div>
+
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Numeric parameter.</p>
+                        <p><b>Function:</b> Adds an offset multiplied by <code class="code _code-number">1e-05</code> for the shader's <code class="code _code-number">xD</code> and <code class="code _code-number">yD</code> variable.
+                        <i>(Improving graphics artifacts in the shader)</i>.</p>
+                        <p><b>Default value:</b> <code class="code _code-number">1.0</code></p>
+                    </div>
+                </div>
+            </div>
+
+                        <!-- /////////////////////////////////////////////// -->
+
+            <div class="_ContentList">
+                <div class="_ListImage">
+                    <div class="_HeaderImage" style="width: 120px; min-width: 120px; margin-left: 30px;">Flags</div>
+                    <div class="_HeaderDec" style="flex-grow: 1; padding-right: 20px;">Description</div>
+                </div>
+
+                <!-- _Active -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-bool">_Active</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Bool parameter.</p>
+                        <p><b>Function:</b>This flag determines whether to set and adjust the object to fill it on the screen, this happens when the flag is for <code class="code _code-bool">False</code>, it is automatically set to <code class="code _code-bool">True</code>.</p>
+                        <p><b>Default value:</b> <code class="code _code-bool">False</code></p>
+                    </div>
+                </div>
+
+                <!-- _Visibility_A -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-bool">_Visibility_A</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Bool parameter.</p>
+                        <p><b>Function:</b>This variable indicates the visibility of the point in the <b>upper left</b> corner of the polygon.</p>
+                        <p><b>Default value:</b> <code class="code _code-bool">False (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _Visibility_B -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-bool">_Visibility_B</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Bool parameter.</p>
+                         <p><b>Function:</b>This variable indicates the visibility of the point in the <b>upper right</b> corner of the polygon.</p>
+                        <p><b>Default value:</b> <code class="code _code-bool">False (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _Visibility_C -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-bool">_Visibility_C</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Bool parameter.</p>
+                        <p><b>Function:</b>This variable indicates the visibility of the point in the <b>lower right</b> corner of the polygon.</p>
+                        <p><b>Default value:</b> <code class="code _code-bool">False (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _Visibility_D -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-bool">_Visibility_D</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Bool parameter.</p>
+                       <p><b>Function:</b>This variable indicates the visibility of the point in the <b>lower left</b> corner of the polygon.</p>
+                        <p><b>Default value:</b> <code class="code _code-bool">False (Automatic)</code></p>
+                    </div>
+                </div>
+
+                <!-- _IgnoreShowing -->
+                <div class="_ListItem">
+                    <div class="_ItemCode" style="width: 150px; min-width: 150px;">
+                        <b><code class="_code-bool">_IgnoreShowing</code></b>
+                    </div>
+                    
+                    <div class="_ItemDec">
+                        <p><b>Type:</b> Bool parameter.</p>
+                        <p><b>Function:</b> This flag sets whether the automatic visibility of the object on the screen should be disabled.</p>
+                        <p><b>Default value:</b> <code class="code _code-bool">False</code></p>
+                    </div>
+                </div>
+
+            <br><hr><br>
+
+            <h2>3. Behaviors</h2>
+
+            <br><hr><br>
+
+            <!-- ************************************************************************ -->
+
+            <h2 style="padding-top: 10px">3.1. Details: Startup in <img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon">Polygon Requiring Objects</h2>
+            <br>
+            <p>This behavior changes the position of this object to the center of the screen as well as fills the entire screen. This activates when the <img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon"><code class="code _code-bool">_Active</code> flag is set to <code class="code _code-bool">False</code>.</p>
+            It automatically sets this flag to <code class="code _code-bool">True</code> after that.</p>
+            <p>
+            This behavior also disables the visibility of the object if <img src="Media/Main/Tails7InfoObject.png" alt="Tails7 Info Object Icon"><code class="code _code-string">_API</code> has <code class="code _code-string">CPU</code> text, <code class="code _code-string">DirectDraw</code> or <code class="code _code-string">Direct3D8</code>.
+            </p>
+			<hr><br>
+
+
+			
+            <!-- ************************************************************************ -->
+
+            <h2 style="padding-top: 10px">3.2. Details: Set Points and Other Varibles in <img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon">Polygon Requiring Objects</h2>
+            <br>
+            <p>This behavior is responsible for setting the <img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon"><code class="code _code-number">_PointX_A</code>, 
+                <img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon"><code class="code _code-number">_PointY_A</code>, 
+                <img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon"><code class="code _code-bool">_Visibility_A</code>, 
+
+                <img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon"><code class="code _code-number">_PointX_B</code>, 
+                <img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon"><code class="code _code-number">_PointY_B</code>, 
+                <img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon"><code class="code _code-bool">_Visibility_B</code>, 
+
+                <img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon"><code class="code _code-number">_PointX_C</code>, 
+                <img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon"><code class="code _code-number">_PointY_C</code>, 
+                <img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon"><code class="code _code-bool">_Visibility_C</code>, 
+
+                <img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon"><code class="code _code-number">_PointX_D</code>, 
+                <img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon"><code class="code _code-number">_PointY_D</code>, 
+                <img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon"><code class="code _code-bool">_Visibility_D</code> and 
+
+                <img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon"><code class="code _code-number">_Layer</code> variables of the objects specified in it in this behavior.
+
+
+            </p>
+			<hr><br>
+
+            <!-- ************************************************************************ -->
+
+            <h2 style="padding-top: 10px">3.3. Details: Set Shader Varibles in <img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon">Polygon Requiring Objects</h2>
+            <br>
+            <p>This behavior is responsible for setting values from this object to shader values.</p>
+			<hr><br>
+
+
+            <!-- ************************************************************************ -->
+
+            <h2 style="padding-top: 10px">3.4. Details: Set Visibility in <img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon">Polygon Requiring Objects</h2>
+            <br>
+            <p>This behavior modifies the visibility of the object in the dependency by calculating 
+                <code class="code _code-number"><img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon">_Visibility_A 
+                    * <img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon">_Visibility_B 
+                    * <img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon">_Visibility_C 
+                    * <img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon">_Visibility_D</code> and the <img src="Media/Main/PolygonRequiringObjects.png" alt="Polygon Requiring Objects Icon"><code class="code _code-bool">_IgnoreShowing</code> flag.</p>
+			<br>
+
+
+            </div>
         </main>
       </div>
     </body>

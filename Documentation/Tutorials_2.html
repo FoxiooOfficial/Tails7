@@ -34,13 +34,13 @@
                     <hr/>
             
                     <!-- Instrukcje -->
-                    <li>
-                        <a href="Instructions.html">Instructions</a>
+                    <!--<li>-->
+                        <!--<a href="Instructions.html">Instructions</a>-->
                         <ul>
                             <li><a href="Instructions_1.html">What is Tails7?</a></li>
                             <li><a href="Instructions_2.html">Engine Limits and Known Issues</a></li>
                         </ul>
-                    </li>
+                    <!--</li>-->
                     <hr/>
             
                     <!-- Rozpoczęcie pracy -->
@@ -61,7 +61,7 @@
                             <li><a href="ConfigurationObjects_6.html">Tails7 Center Pointer</a></li>
                             <li><a href="ConfigurationObjects_7.html">Tails7 Background Gradient</a></li>
                             <li><a href="ConfigurationObjects_8.html">Sprite Objects</a></li>
-                            <li><a href="ConfigurationObjects_9.html">Fade Objects</a></li>
+                            <li><a href="ConfigurationObjects_9.html">Polygon Objects</a></li>
                             <li><a href="ConfigurationObjects_10.html">Line Objects</a></li>
                         </ul>
                     </li>
@@ -78,8 +78,8 @@
                         <a href="Tutorials.html">Tutorials</a>
                         <ul>
                             <li><a href="Tutorials_1.html">Object Mapping Basics</a></li>
-                            <li><a href="Tutorials_2.html">Creating Fade Effects</a></li>
-                            <li><a href="Tutorials_3.html">Working with Lines</a></li>
+                            <li><a href="Tutorials_2.html">Creating Polygon Effects</a></li>
+                            <!--<li><a href="Tutorials_3.html">Working with Lines</a></li>-->
                             <li><a href="Tutorials_4.html">Changing Game Resolution</a></li>
                             <li><a href="Tutorials_5.html">Background Objects Setup</a></li>
                             <!--<li><a href="Tutorials_6.html">Camera Configuration</a></li>-->
@@ -123,30 +123,59 @@
         <!-- Główna zawartość strony #####################################################-->
         <main class="_Content">
 
-            <h1>Some text</h1>
-            <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum minus officia reiciendis accusantium suscipit distinctio, tempora deserunt provident, nobis voluptatum illo soluta eos. Obcaecati quia inventore dolore omnis maiores at?
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, odio!</p>
-            <p>Inventore soluta sit accusamus nihil assumenda nemo quam illum ad.</p>
-            <p>Nemo nihil ex sequi consequatur quam? Excepturi eum totam optio?</p>
-            <p>Minus eum fugiat porro praesentium ipsum? Suscipit perspiciatis laborum impedit.</p>
-            <p>Eveniet assumenda omnis repellendus consequuntur laborum quae? Libero, ullam dolorum.</p>
-            <p>Quod similique aspernatur quo sed dolore quaerat corrupti fugit natus!</p>
-            <p>Aperiam saepe animi aliquam, explicabo expedita totam velit temporibus nam!</p>
-            <p>Tempora doloribus, quaerat ullam repellat nihil accusamus atque debitis ipsam!</p>
-            <p>Laborum consequatur non possimus excepturi recusandae autem delectus voluptas rem.</p>
-            <p>Cum ut ea, ad expedita officiis assumenda est facilis veritatis!</p>
-            <p>Eaque deleniti ipsum delectus tempora modi culpa aliquam molestiae eligendi?</p>
-            <p>Minima, sint vero voluptatem est culpa omnis impedit dolores maxime?</p>
-            <p>Reprehenderit facilis suscipit facere temporibus perferendis vero illum, inventore officia?</p>
-            <p>Quam rerum quibusdam iure eius culpa excepturi unde commodi sequi!</p>
-            <p>Doloremque veritatis corporis, quibusdam saepe illo cupiditate recusandae nulla nisi?</p>
-            <p>Quo vero nemo tempora odit, iusto iure perferendis veritatis voluptate!</p>
-            <p>Totam sed cumque similique eius temporibus optio rem, voluptatibus obcaecati.</p>
-            <p>Sit voluptates quas quia, amet nemo id voluptatibus quos nihil!</p>
-            <p>Unde ratione dignissimos rerum? Vel tempore dolore laboriosam maxime deleniti?</p>
-            <p>Molestiae dolorem sunt quisquam incidunt qui ratione voluptate laboriosam. Ipsam.</p>
-            </p>
+            <h1>Tutorial 2: Creating Polygon Effects</h1>
+            <hr>
+            <br>
+            <h3>Here you will learn how to create a polygon object</h3>
+            <br>
+            <p>Step one, we open Tails7.mfa in Clickteam Fusion.</p>
+
+            <img src="Media/Tut/2/p1.png" width="100%"><br>
+
+            <br>
+            <p>Note that there are already finished Polygon object with points. I'm going to duplicate it and change the textures so it doesn't get confused.</p>
+
+            <img src="Media/Tut/2/p2.png"><br>
+
+            <br>
+            <p>For other objects selected, I turn off the ability to create.</p>
+
+            <img src="Media/Tut/2/p3.png"><br>
+
+            <br>
+            <p>We launch the frame and. Polygon not working?</p>
+
+            <img src="Media/Tut/2/p4.png" width="100%"><br>
+            <br>
+            <p>We need to configure Polygon to work with the new points. Go to the “Set Points and Other Varibles” behavior.</p>
+
+            <img src="Media/Tut/2/p5.png"><br>
+
+            
+            <img src="Media/Tut/2/p6.png"><br>
+
+                        <br>
+            <p>So here I have to replace the previous points with new duplicate ones.</p>
+            
+            <img src="Media/Tut/2/p7.png"><br>
+
+                        <br>
+            <p>After placing the polygons correctly and starting the project, everything works!</p>
+
+            <img src="Media/Tut/2/p8.png" width="100%"><br>
+
+            <br>
+            <p>I will now add the ability to create these polygons depending on the new object I made</p>
+
+            <img src="Media/Tut/2/p9.png" width="100%"><br>
+
+            <br><p>After performing events as below, polygons are created for each of these objects!</p>
+
+            <img src="Media/Tut/2/p10.png"><br>
+
+            <img src="Media/Tut/2/p11.png" width="100%"><br>
+
+            <img src="Media/Tut/2/p12.png" width="100%"><br>
 
         </main>
       </div>
