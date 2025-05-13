@@ -5,7 +5,7 @@
 
   <h2>Mode7 engine for Clickteam Fusion</h2>
 
-  | <a href="https://github.com/FoxiooOfficial/FoxiooShaderPack/issues" class="_LinkButton">`⚠️ Report Bug`</a> | **`Release: R1.0.1_10.05.25a`** | **`Edit description from: 11.05.25`** | **`License: MIT`** |
+  | <a href="https://github.com/FoxiooOfficial/FoxiooShaderPack/issues" class="_LinkButton">`⚠️ Report Bug`</a> | **`Release: R1.0.1_13.05.25`** | **`Edit description from: 13.05.25`** | **`License: MIT`** |
 </div>
 
 ## 📚 Table of contents
