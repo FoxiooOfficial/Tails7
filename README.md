@@ -5,7 +5,12 @@
 
   <h2>Mode7 engine for Clickteam Fusion</h2>
 
-  | <a href="https://github.com/FoxiooOfficial/FoxiooShaderPack/issues" class="_LinkButton">`⚠️ Report Bug`</a> | **`Release: R1.0.1_13.05.25`** | **`Edit description from: 13.05.25`** | **`License: MIT`** |
+  | <a href="https://github.com/FoxiooOfficial/FoxiooShaderPack/issues" class="_LinkButton">`⚠️ Report Bug`</a> | **`Release: R1.0.1_13.05.25`** | **`Edit description from: 16.11.25`** | **`License: MIT`** |
+</div>
+
+<div>
+<img src="https://foxiooofficial.github.io/Media/Foxioo/OhNo.png">
+<h1>⚠️ Hey! Tails7 will have some VERY big changes, including new documentation, a new logo, README, and other things. The planned update is estimated for November 29, 2025! ⚠️</h1>
 </div>
 
 ## 📚 Table of contents
