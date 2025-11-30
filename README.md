@@ -1,7 +1,7 @@
 <div align="center">
    
    <a href="https://github.com/FoxiooOfficial/Tails7">
-       <img src="Resources/Logo/Logo.png" alt="Logo">
+       <img src="Resources/Logo/Logo.png" alt="Logo" width="75%">
    </a>
      
    <br><br>
@@ -93,11 +93,11 @@ Features of Tails7:
 
 10. When **Tails7.mfa** opens in Fusion, run the Runtime.
 
-<img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/10.png" alt="Installation: 10" width="100%">
+<img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/a.png" alt="Installation: 10" width="100%">
 
 11. **Congratulations! You have successfully installed the engine and can start working on your project/game!**
 
-<img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/11.png" alt="Installation: 11" width="100%">
+<img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/b.png" alt="Installation: 11" width="100%">
 
 ## ❗ Reports And Ideas
 
