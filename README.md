@@ -1,7 +1,7 @@
 <div align="center">
    
    <a href="https://github.com/FoxiooOfficial/Tails7">
-       <img src="Resources/Logo/Logo.png" alt="Logo" width="75%">
+       <img src="Resources/Logo/Logo.png" alt="Logo" width="50%">
    </a>
      
    <br><br>
@@ -118,3 +118,5 @@ Please report <a href="https://github.com/FoxiooOfficial/Tails7/issues">here</a>
 
 - ✅ You can modify the code and distribute it as you like.
 - ⚠️ However, you must specify me (**Foxioo**) in the credits and people who are in special thanks!
+
+<img src="https://foxiooofficial.github.io/tails7-docs/media/about/vanilla.png" alt="Vanilla">
