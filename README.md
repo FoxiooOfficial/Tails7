@@ -21,7 +21,7 @@
 
 ## 🦊 About
 
-**Tails7 is a Mode7-style engine for Clickteam Fusion. You can use it to create pseudo "3D" games** It does not use additional extensions and works by reversing calculations from the shader.
+**Tails7 is a Mode7-style engine for Clickteam Fusion. You can use it to create pseudo "3D" games**. It does not use additional extensions and works by reversing calculations from the shader.
 
 - The engine is designed to handle multiple modes as it needs to map the object, scale, display on the screen and more.
 - Very easy to use and has many <a href="https://foxioo.itch.io/tails7examples">**✨special examples✨**</a>.
