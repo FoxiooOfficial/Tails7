@@ -5,7 +5,7 @@
    </a>
      
    <br><br>
-   <b>An advanced MODE7 engine for Clickteam Fusion!</b><br>
+   <b>An advanced Mode 7 engine for Clickteam Fusion!</b><br>
    <a href="https://github.com/FoxiooOfficial/Tails7/issues">Report Bug</a>
    |
    <a href="https://foxiooofficial.github.io/tails7-docs/index.html">Documentation</a>
