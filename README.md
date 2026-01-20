@@ -103,9 +103,7 @@ Features of Tails7:
 
 🔴 **Issue topic:**
 
-Please report <a href="https://github.com/FoxiooOfficial/Tails7/issues">here</a>, they will be checked on an ongoing basis and attempts will be made to fix them.
-
-*(These bugs will be recorded in the notebook **Bug Tracker.xlsx**)*
+Please report <a href="https://github.com/FoxiooOfficial/Tails7/issues">here</a>.
 
 
 🟢 **Ideas topic:**
