@@ -31,6 +31,11 @@ Features of Tails7:
 - Designed for modularity and modern computers
 - Easy porting for other Runtimes such as Android, iOS, Mac
 
+ℹ️ **Note from 03/21/2026:**
+- The latest version is R1.0.2; 
+- Version R1.0.3 is currently being tested; it will allow for the creation of Polygons (previously, these were Quads, which lack perspective correction and would simply disappear if they were too large).
+- A test version of "Depth Buffer" will also be implemented, but only for D3D9 due to limitations in CTF.
+
 ℹ️ <a href="https://foxiooofficial.github.io/tails7-docs/index.html">The documentation has been moved to website and updated whenever necessary.</a>
 
 ℹ️ I apologize for any errors and typos and please report them to me!
