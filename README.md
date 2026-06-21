@@ -31,11 +31,6 @@ Features of Tails7:
 - Designed for modularity and modern computers
 - Easy porting for other Runtimes such as Android, iOS, Mac
 
-ℹ️ **Note from 03/21/2026:**
-- The latest version is R1.0.2; 
-- Version R1.0.3 is currently being tested; it will allow for the creation of Polygons (previously, these were Quads, which lack perspective correction and would simply disappear if they were too large).
-- A test version of "Depth Buffer" will also be implemented, but only for D3D9 due to limitations in CTF.
-
 ℹ️ <a href="https://foxiooofficial.github.io/tails7-docs/index.html">The documentation has been moved to website and updated whenever necessary.</a>
 
 ℹ️ I apologize for any errors and typos and please report them to me!
@@ -46,6 +41,8 @@ Features of Tails7:
 - Glace Sue
 - Clickteam
 - KYwoo
+- PsichiX
+- NaitorStudios
 
 ## 📝 Requirements
 
@@ -55,7 +52,7 @@ Features of Tails7:
                 <li><b>Clickteam Fusion 2.5+ DLC:</b> <a href="https://www.clickteam.com/clickteam-fusion-2-5-plus">Link</a> or <a href="https://store.steampowered.com/app/1056780/Clickteam_Fusion_25_Addon/">Link for Steam version</a></li>
                 <li><b>FSP / Foxioo Shader Pack:</b> <a href="https://github.com/FoxiooOfficial/FoxiooShaderPack">Link</a>
                 <li><b>Hardware that meets the minimum requirements with Clickteam Fusion.</b></li>
-                <li><b>Device that supports Direct3D9 or Direct3D11 shaders.</b></li>
+                <li><b>Device that supports Direct3D 9 or Direct3D 11 shaders.</b></li>
   </ul>
 
 ## 💿 Installation
