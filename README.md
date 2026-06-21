@@ -31,7 +31,7 @@ Features of Tails7:
 - Designed for modularity and modern computers
 - Easy porting for other Runtimes such as Android, iOS, Mac
 
-ℹ️ <a href="https://foxiooofficial.github.io/tails7-docs/index.html">The documentation has been moved to website and updated whenever necessary.</a>
+ℹ️ <s><a href="https://foxiooofficial.github.io/tails7-docs/index.html">The documentation has been moved to website and updated whenever necessary.</a></s> **Documentation to be rewritten**
 
 ℹ️ I apologize for any errors and typos and please report them to me!
 
@@ -48,7 +48,7 @@ Features of Tails7:
 
 <p><b>This project requires the following:</b></p>
     <ul>
-                <li><b>Clickteam Fusion 2.5</b> <i>(Build 296.8 or later)</i><b>:</b> <a href="https://www.clickteam.com/clickteam-fusion-2-5">Link</a> or <a href="https://store.steampowered.com/app/248170/Clickteam_Fusion_25/">Link for Steam version</a></li>
+                <li><b>Clickteam Fusion 2.5</b> <i>(Build 296.9 or later)</i><b>:</b> <a href="https://www.clickteam.com/clickteam-fusion-2-5">Link</a> or <a href="https://store.steampowered.com/app/248170/Clickteam_Fusion_25/">Link for Steam version</a></li>
                 <li><b>Clickteam Fusion 2.5+ DLC:</b> <a href="https://www.clickteam.com/clickteam-fusion-2-5-plus">Link</a> or <a href="https://store.steampowered.com/app/1056780/Clickteam_Fusion_25_Addon/">Link for Steam version</a></li>
                 <li><b>FSP / Foxioo Shader Pack:</b> <a href="https://github.com/FoxiooOfficial/FoxiooShaderPack">Link</a>
                 <li><b>Hardware that meets the minimum requirements with Clickteam Fusion.</b></li>
