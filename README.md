@@ -5,7 +5,7 @@
    </a>
      
    <br><br>
-   <b>An advanced MODE7 engine for Clickteam Fusion!</b><br>
+   <b>An advanced Mode 7 engine for Clickteam Fusion!</b><br>
    <a href="https://github.com/FoxiooOfficial/Tails7/issues">Report Bug</a>
    |
    <a href="https://foxiooofficial.github.io/tails7-docs/index.html">Documentation</a>
@@ -21,7 +21,7 @@
 
 ## 🦊 About
 
-**Tails7 is a Mode7-style engine for Clickteam Fusion.** It does not use additional extensions and works by reversing calculations from the shader.
+**Tails7 is a Mode7-style engine for Clickteam Fusion. You can use it to create pseudo "3D" games**. It does not use additional extensions and works by reversing calculations from the shader.
 
 - The engine is designed to handle multiple modes as it needs to map the object, scale, display on the screen and more.
 - Very easy to use and has many <a href="https://foxioo.itch.io/tails7examples">**✨special examples✨**</a>.
@@ -30,6 +30,11 @@ Features of Tails7:
 - Free, fully open source code under the MIT License
 - Designed for modularity and modern computers
 - Easy porting for other Runtimes such as Android, iOS, Mac
+
+ℹ️ **Note from 03/21/2026:**
+- The latest version is R1.0.2; 
+- Version R1.0.3 is currently being tested; it will allow for the creation of Polygons (previously, these were Quads, which lack perspective correction and would simply disappear if they were too large).
+- A test version of "Depth Buffer" will also be implemented, but only for D3D9 due to limitations in CTF.
 
 ℹ️ <a href="https://foxiooofficial.github.io/tails7-docs/index.html">The documentation has been moved to website and updated whenever necessary.</a>
 
@@ -103,9 +108,7 @@ Features of Tails7:
 
 🔴 **Issue topic:**
 
-Please report <a href="https://github.com/FoxiooOfficial/Tails7/issues">here</a>, they will be checked on an ongoing basis and attempts will be made to fix them.
-
-*(These bugs will be recorded in the notebook **Bug Tracker.xlsx**)*
+Please report <a href="https://github.com/FoxiooOfficial/Tails7/issues">here</a>.
 
 
 🟢 **Ideas topic:**
