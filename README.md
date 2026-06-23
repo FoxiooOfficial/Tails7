@@ -42,7 +42,7 @@ In terms of "modularity", Tails7 relies on "modes" to determine how to calculate
 ## Technical Specifications
 
 - The latest stable release is **R1.0.2_29.11.25**;
-- The latest preview release is **R1.0.3_22.06.26** *(Recommended for use)*;
+- The latest preview release is **R1.0.3_22.06.26a** *(Recommended for use)*;
 - This description was last updated on **June 23, 2026**;
 - You can find the tech demos on [Itch.io](https://foxioo.itch.io/tails7examples)
    - *(the code is terrible, but it shows off the engine's capabilities)*
@@ -106,7 +106,7 @@ I would like to sincerely thank them because the project would not work out:
 10. When **Tails7.mfa** opens in Fusion, run the Runtime.<br><br>
 <img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/a.png" alt="Installation: 10" width="100%"><br>
 11. **Congratulations! You have successfully installed the engine and can start working on your project/game!**<br>
-<img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/b.png" alt="Installation: 11" width="100%"><br>
+<img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/b.png" alt="Installation: 11" width="100%">
 
 ## Support and Social Media
 You can support the project or me by making a donation on [ko-fi](https://ko-fi.com/foxioo)<br>
