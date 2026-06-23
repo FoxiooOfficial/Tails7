@@ -121,8 +121,6 @@ Here you can find my [social media accounts](https://foxiooofficial.github.io/li
   </p>
 </details>
 
----
-
 ## License
 This project is available under the terms of the **MIT** license
 
@@ -130,6 +128,9 @@ This project is available under the terms of the **MIT** license
 - **You may:** use this code commercially, modify it, distribute it, and sublicense it.
 - **You must:** include the original copyright notice with any copy of the project.
 - **The author assumes no liability:** the code is provided "as is", without any warranty.
+
+<details>
+<summary><b>License Details</b></summary>
 
 ```text
 MIT License
