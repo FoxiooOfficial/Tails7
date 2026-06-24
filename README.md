@@ -47,7 +47,7 @@ In terms of "modularity", Tails7 relies on "modes" to determine how to calculate
 - You can find the tech demos on [Itch.io](https://foxioo.itch.io/tails7examples)
    - *(the code is terrible, but it shows off the engine's capabilities)*
 - Do you need the documentation?
-   - **Right now, it's in terrible shape and is being rewritten;** here's the [link](https://foxiooofficial.github.io/tails7-docs/index.html).
+   - here's the [link](https://foxiooofficial.github.io/docs/tails7/Introduction.html).
 
 ## Special Thanks
 
