@@ -1,6 +1,11 @@
 # Change Log
 **All notable changes to this project will be documented in this file.**
 
+<h2>R1.0.3_22.06.26a / June 22, 2026 (Preview)</h2>
+
+- Hotfix update (again)!
+- "STATIC" Scale Mode has been fixed; previously, scaling was only relative to the X-axis; now it is relative to both the X and Y axes.
+
 <h2>R1.0.3_22.06.26 / June 22, 2026 (Preview)</h2>
 
 - Hotfix update!
