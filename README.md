@@ -43,7 +43,7 @@ In terms of "modularity", Tails7 relies on "modes" to determine how to calculate
 
 - The latest stable release is **R1.0.2_29.11.25**;
 - The latest preview release is **R1.0.3_22.06.26a** *(Recommended for use)*;
-- This description was last updated on **June 23, 2026**;
+- This description was last updated on **July 3, 2026**;
 - You can find the tech demos on [Itch.io](https://foxioo.itch.io/tails7examples)
    - *(the code is terrible, but it shows off the engine's capabilities)*
 - Do you need the documentation?
@@ -76,37 +76,53 @@ I would like to sincerely thank them because the project would not work out:
    
 ## Installation
 
-1. Press **Code** -> **Download ZIP**.<br><br>
-<img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/1.png" alt="Installation: 1" width="100%">
-<br>
-2. Choose the folder where you want to download the entire zip file.<br><br>
-<img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/2.png" alt="Installation: 2" width="100%">
-<br>
-3. Open the folder where the Tails7 zip file is located.<br><br>
-<img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/3.png" alt="Installation: 3" width="100%">
-<br>
-4. Extract the Tails7 zip file.<br><br>
-<img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/4.png" alt="Installation: 4" width="100%">
-<br>
-5. In your browser, now go to the GitHub page of the FSP package ***(If you have FSP installed, skip to point 9)**.<br><br>
-<img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/5.png" alt="Installation: 5" width="100%">
-<br>
-6. Also click **Code** -> **Download ZIP** to download the shader pack that is needed for Tails7.<br><br>
-<img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/6.png" alt="Installation: 6" width="100%">
-<br>
-7. In Clickteam Fusion, go to **Tools** -> **Windows Explorer**, a window should open showing where Fusion is installed.<br><br>
-<img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/7.png" alt="Installation: 7" width="100%">
-<br>
-8. Move the **Foxioo Shader Pack** folder from the zip subfolder to the **Effects** folder where Fusion is installed and restart Fusion.<br><br>
-<img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/8.png" alt="Installation: 8" width="100%">
-<br>
-9. Return to the folder where you downloaded the project and open **Tails7.mfa**.<br><br>
-<img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/9.png" alt="Installation: 9" width="100%">
-<br>
-10. When **Tails7.mfa** opens in Fusion, run the Runtime.<br><br>
-<img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/a.png" alt="Installation: 10" width="100%"><br>
-11. **Congratulations! You have successfully installed the engine and can start working on your project/game!**<br>
-<img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/b.png" alt="Installation: 11" width="100%">
+<details>
+  <summary><b>Installation process</b></summary>
+   <p>1. Press <b>Code</b> -> <b>Download ZIP</b>.<br></p>
+      <img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/1.png" alt="Installation: 1" width="100%">
+   <br><br>
+   
+   <p>2. Choose the folder where you want to download the entire zip file.<br></p>
+      <img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/2.png" alt="Installation: 2" width="100%">
+   <br><br>
+   
+   <p>3. Open the folder where the Tails7 zip file is located.<br></p>
+      <img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/3.png" alt="Installation: 3" width="100%">
+   <br><br>
+      
+   <p>4. Extract the Tails7 zip file.<br></p>
+      <img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/4.png" alt="Installation: 4" width="100%">
+   <br><br>
+   
+   <p>5. In your browser, now go to the GitHub page of the FSP package <b>(If you have FSP installed, skip to point 9)</b>.<br></p>
+      <img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/5.png" alt="Installation: 5" width="100%">
+   <br><br>
+   
+   <p>6. Also click <b>Code</b> -> <b>Download ZIP</b> to download the shader pack that is needed for Tails7.<br></p>
+      <img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/6.png" alt="Installation: 6" width="100%">
+   <br><br>
+   
+   <p>7. In Clickteam Fusion, go to <b>Tools</b> -> <b>Windows Explorer</b>, a window should open showing where Fusion is installed.<br></p>
+      <img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/7.png" alt="Installation: 7" width="100%">
+   <br><br>
+   
+   <p>8. Move the **Foxioo Shader Pack** folder from the zip subfolder to the <b>Effects** folder where Fusion is installed and restart Fusion.<br></p>
+      <img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/8.png" alt="Installation: 8" width="100%">
+   <br><br>
+   
+   <p>9. Return to the folder where you downloaded the project and open <b>Tails7.mfa</b>.<br></p>
+      <img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/9.png" alt="Installation: 9" width="100%">
+   <br><br>
+   
+   <p>10. When <b>Tails7.mfa</b> opens in Fusion, run the Runtime.<br></p>
+      <img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/a.png" alt="Installation: 10" width="100%">
+   <br><br>
+   
+   <p>11. <b>Congratulations! You have successfully installed the engine and can start working on your project/game!</b></p>
+      <img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/b.png" alt="Installation: 11" width="100%">
+   <br>
+   
+</details>
 
 ## Support and Social Media
 You can support the project or me by making a donation on [ko-fi](https://ko-fi.com/foxioo)<br>
@@ -114,11 +130,13 @@ Here you can find my [social media accounts](https://foxiooofficial.github.io/li
 
 <details>
   <summary><b>Star History Chart</b></summary>
-  <p align="center">
-    <a href="https://star-history.com">
-      <img src="https://api.star-history.com/svg?repos=FoxiooOfficial/Tails7&type=date" alt="Star History Chart" width="100%">
-    </a>
-  </p>
+   <br> <a href="https://www.star-history.com/?repos=FoxiooOfficial%2FTails7&type=date&legend=top-left">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=FoxiooOfficial/Tails7&type=date&theme=dark&legend=top-left" />
+      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=FoxiooOfficial/Tails7&type=date&legend=top-left" />
+      <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=FoxiooOfficial/Tails7&type=date&legend=top-left" />
+    </picture>
+  </a>
 </details>
 
 ## License
