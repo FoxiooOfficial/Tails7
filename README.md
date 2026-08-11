@@ -41,9 +41,8 @@ In terms of "modularity", Tails7 relies on "modes" to determine how to calculate
 
 ## Technical Specifications
 
-- The latest stable release is **R1.0.2_29.11.25**;
-- The latest preview release is **R1.0.3_22.06.26a** *(Recommended for use)*;
-- This description was last updated on **July 3, 2026**;
+- The latest stable release is **R1.0.3_22.06.26a*;
+- This description was last updated on **August 11, 2026**;
 - You can find the tech demos on [Itch.io](https://foxioo.itch.io/tails7examples)
    - *(the code is terrible, but it shows off the engine's capabilities)*
 - Do you need the documentation?
