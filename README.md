@@ -41,8 +41,8 @@ In terms of "modularity", Tails7 relies on "modes" to determine how to calculate
 
 ## Technical Specifications
 
-- The latest stable release is **R1.0.3_22.06.26a*;
-- This description was last updated on **August 11, 2026**;
+- The latest stable release is **R1.0.3_22.06.26a**;
+- This description was last updated on **August 28, 2026**;
 - You can find the tech demos on [Itch.io](https://foxioo.itch.io/tails7examples)
    - *(the code is terrible, but it shows off the engine's capabilities)*
 - Do you need the documentation?
@@ -70,7 +70,7 @@ I would like to sincerely thank them because the project would not work out:
    - [Link to the Steam version](https://store.steampowered.com/app/248170/?l=english);
 - **The project must be set to Direct3D 9 or Direct3D 11 Display Mode! Otherwise, the calculations will not work!**
 - **Basic knowledge of how to use Clickteam Fusion**
-- **Foxioo Shader Pack is installed**
+- **Foxioo's Shader Pack is installed**
    - [Link to the repository](https://github.com/FoxiooOfficial/FoxiooShaderPack)
    
 ## Installation
@@ -105,7 +105,7 @@ I would like to sincerely thank them because the project would not work out:
       <img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/7.png" alt="Installation: 7" width="100%">
    <br><br>
    
-   <p>8. Move the **Foxioo Shader Pack** folder from the zip subfolder to the <b>Effects** folder where Fusion is installed and restart Fusion.<br></p>
+   <p>8. Move the "Foxioo Shader Pack" folder from the zip subfolder to the <b>Effects** folder where Fusion is installed and restart Fusion.<br></p>
       <img src="https://foxiooofficial.github.io/tails7-docs/media/objects/installation/8.png" alt="Installation: 8" width="100%">
    <br><br>
    
